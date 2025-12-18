@@ -1,0 +1,334 @@
+{
+  "date": "2025-12-02",
+  "commitCount": 4,
+  "commits": [
+    {
+      "sha": "6660da5081c3222527c3ad7b60f592a615a1070a",
+      "node_id": "C_kwDOQa-ZGNoAKDY2NjBkYTUwODFjMzIyMjUyN2MzYWQ3YjYwZjU5MmE2MTVhMTA3MGE",
+      "commit": {
+        "author": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T21:50:03Z"
+        },
+        "committer": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T21:50:03Z"
+        },
+        "message": "Add pagination to products",
+        "tree": {
+          "sha": "22b09f8b1d30d87ec31eae7ea2883052bdf84c72",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/trees/22b09f8b1d30d87ec31eae7ea2883052bdf84c72"
+        },
+        "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/commits/6660da5081c3222527c3ad7b60f592a615a1070a",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/6660da5081c3222527c3ad7b60f592a615a1070a",
+      "html_url": "https://github.com/pkibbey/peak-blooms/commit/6660da5081c3222527c3ad7b60f592a615a1070a",
+      "comments_url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/6660da5081c3222527c3ad7b60f592a615a1070a/comments",
+      "author": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "404583a939a2208efe20a8ea565259d1f4b64558",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/404583a939a2208efe20a8ea565259d1f4b64558",
+          "html_url": "https://github.com/pkibbey/peak-blooms/commit/404583a939a2208efe20a8ea565259d1f4b64558"
+        }
+      ]
+    },
+    {
+      "sha": "404583a939a2208efe20a8ea565259d1f4b64558",
+      "node_id": "C_kwDOQa-ZGNoAKDQwNDU4M2E5MzlhMjIwOGVmZTIwYThlYTU2NTI1OWQxZjRiNjQ1NTg",
+      "commit": {
+        "author": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T16:51:04Z"
+        },
+        "committer": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T16:51:04Z"
+        },
+        "message": "Add a script to seed the products via a CSV\n\nConsolidate docs",
+        "tree": {
+          "sha": "531e966808c43da3e301035b7e6b1492489f1db8",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/trees/531e966808c43da3e301035b7e6b1492489f1db8"
+        },
+        "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/commits/404583a939a2208efe20a8ea565259d1f4b64558",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/404583a939a2208efe20a8ea565259d1f4b64558",
+      "html_url": "https://github.com/pkibbey/peak-blooms/commit/404583a939a2208efe20a8ea565259d1f4b64558",
+      "comments_url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/404583a939a2208efe20a8ea565259d1f4b64558/comments",
+      "author": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "52d5f97c6a2cb6dee9183de20a27b233a72013c2",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/52d5f97c6a2cb6dee9183de20a27b233a72013c2",
+          "html_url": "https://github.com/pkibbey/peak-blooms/commit/52d5f97c6a2cb6dee9183de20a27b233a72013c2"
+        }
+      ]
+    },
+    {
+      "sha": "52d5f97c6a2cb6dee9183de20a27b233a72013c2",
+      "node_id": "C_kwDOQa-ZGNoAKDUyZDVmOTdjNmEyY2I2ZGVlOTE4M2RlMjBhMjdiMjMzYTcyMDEzYzI",
+      "commit": {
+        "author": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T14:40:19Z"
+        },
+        "committer": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T14:40:19Z"
+        },
+        "message": "Change seed script to upsert instead of delete and create",
+        "tree": {
+          "sha": "0d44e37dd7cf3bafd41f7027c2302da34341517e",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/trees/0d44e37dd7cf3bafd41f7027c2302da34341517e"
+        },
+        "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/commits/52d5f97c6a2cb6dee9183de20a27b233a72013c2",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/52d5f97c6a2cb6dee9183de20a27b233a72013c2",
+      "html_url": "https://github.com/pkibbey/peak-blooms/commit/52d5f97c6a2cb6dee9183de20a27b233a72013c2",
+      "comments_url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/52d5f97c6a2cb6dee9183de20a27b233a72013c2/comments",
+      "author": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "6286b6c5d27bbbbaba658f4b8e34657be23ea133",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/6286b6c5d27bbbbaba658f4b8e34657be23ea133",
+          "html_url": "https://github.com/pkibbey/peak-blooms/commit/6286b6c5d27bbbbaba658f4b8e34657be23ea133"
+        }
+      ]
+    },
+    {
+      "sha": "6286b6c5d27bbbbaba658f4b8e34657be23ea133",
+      "node_id": "C_kwDOQa-ZGNoAKDYyODZiNmM1ZDI3YmJiYmFiYTY1OGY0YjhlMzQ2NTdiZTIzZWExMzM",
+      "commit": {
+        "author": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T13:53:02Z"
+        },
+        "committer": {
+          "name": "Phineas Kibbey",
+          "email": "phineas.kibbey@gmail.com",
+          "date": "2025-12-02T13:53:02Z"
+        },
+        "message": "Add flower/filler product type",
+        "tree": {
+          "sha": "42b127a781f474c98a3083c38f177d119f1c4652",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/trees/42b127a781f474c98a3083c38f177d119f1c4652"
+        },
+        "url": "https://api.github.com/repos/pkibbey/peak-blooms/git/commits/6286b6c5d27bbbbaba658f4b8e34657be23ea133",
+        "comment_count": 0,
+        "verification": {
+          "verified": false,
+          "reason": "unsigned",
+          "signature": null,
+          "payload": null,
+          "verified_at": null
+        }
+      },
+      "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/6286b6c5d27bbbbaba658f4b8e34657be23ea133",
+      "html_url": "https://github.com/pkibbey/peak-blooms/commit/6286b6c5d27bbbbaba658f4b8e34657be23ea133",
+      "comments_url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/6286b6c5d27bbbbaba658f4b8e34657be23ea133/comments",
+      "author": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "committer": {
+        "login": "pkibbey",
+        "id": 1381816,
+        "node_id": "MDQ6VXNlcjEzODE4MTY=",
+        "avatar_url": "https://avatars.githubusercontent.com/u/1381816?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/pkibbey",
+        "html_url": "https://github.com/pkibbey",
+        "followers_url": "https://api.github.com/users/pkibbey/followers",
+        "following_url": "https://api.github.com/users/pkibbey/following{/other_user}",
+        "gists_url": "https://api.github.com/users/pkibbey/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/pkibbey/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/pkibbey/subscriptions",
+        "organizations_url": "https://api.github.com/users/pkibbey/orgs",
+        "repos_url": "https://api.github.com/users/pkibbey/repos",
+        "events_url": "https://api.github.com/users/pkibbey/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/pkibbey/received_events",
+        "type": "User",
+        "user_view_type": "public",
+        "site_admin": false
+      },
+      "parents": [
+        {
+          "sha": "71bfaad866494b91dc4aeed767c45b77c77d954b",
+          "url": "https://api.github.com/repos/pkibbey/peak-blooms/commits/71bfaad866494b91dc4aeed767c45b77c77d954b",
+          "html_url": "https://github.com/pkibbey/peak-blooms/commit/71bfaad866494b91dc4aeed767c45b77c77d954b"
+        }
+      ]
+    }
+  ]
+}
