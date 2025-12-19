@@ -1,6 +1,6 @@
 # Peak Blooms
 
-> A comprehensive documentation of building a modern web platform in 21 days—from design and development to deployment.
+> A comprehensive documentation of building a modern web platform in less than a month. From design and development to deployment.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-16.0-black.svg)
@@ -9,7 +9,7 @@
 
 ## 📖 Overview
 
-Peak Blooms is an interactive journey documenting the complete development lifecycle of a modern web application. This repository showcases the design decisions, technical implementations, challenges faced, and key learnings across a structured 21-day development timeline.
+Peak Blooms is an interactive journey documenting the complete development lifecycle of a modern web application. This repository showcases the design decisions, technical implementations, challenges faced, and key learnings across a structured month-long development timeline.
 
 Whether you're interested in web development best practices, design systems, or simply want to follow a real project from inception to completion, Peak Blooms provides insights into each phase of the development process.
 

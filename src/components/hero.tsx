@@ -22,7 +22,7 @@ export function Hero() {
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
             A comprehensive journey documenting the design, development, and
-            deployment of a modern web platform in just 21 days
+            deployment of a modern web platform in just a month
           </p>
         </div>
 
