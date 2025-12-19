@@ -4,25 +4,20 @@ export default function Day20251208() {
   return (
     <DateCard
       date="2025-12-08"
-      title="Admin Collections & Metrics System"
-      summary="Enabled product management in collections and introduced tracked database client for metrics."
+      title="Metrics System & Admin Management"
+      summary="Implemented database query metrics, replaced dynamic hero with static components, and added admin product management."
       tasks={[
-        "Collection product select",
-        "API routes",
-        "Remove hero banners",
-        "Tracked DB client",
-        "Database metrics",
+        "Create database query metrics system",
+        "Replace dynamic Hero with static components",
+        "Allow admins to manage collection and inspiration products",
+        "Add market price support for products",
       ]}
-      skillsUsed={["Prisma", "Next.js", "Admin UI", "Metrics"]}
+      skillsUsed={["Prisma", "Next.js", "Metrics", "TypeScript"]}
       lessonsLearned={[
-        "Collection mgmt improves flexibility",
-        "Tracked insights optimize perf",
-        "Static simplifies",
+        "Metrics reveal performance bottlenecks",
+        "Collection management increases flexibility",
+        "Static components improve performance",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `class TrackedPrisma { async query(name, fn) {...} }`,
-      }}
     />
   );
 }

@@ -1,13 +1,13 @@
 "use client";
 
 import { Card } from "@/components/ui/card";
+import { Badge } from "./ui/badge";
 import { Button } from "./ui/button";
 
 interface WeekData {
   week: number;
   title: string;
   description: string;
-  taskCount: number;
   milestones: string[];
 }
 
@@ -17,7 +17,6 @@ const weeksData: WeekData[] = [
     title: "Foundation & Planning",
     description:
       "Setting up the project infrastructure, design systems, and core architecture",
-    taskCount: 7,
     milestones: ["Project Setup", "Design System", "Component Foundation"],
   },
   {
@@ -25,7 +24,6 @@ const weeksData: WeekData[] = [
     title: "Feature Development",
     description:
       "Building core features, integrating APIs, and implementing key functionality",
-    taskCount: 7,
     milestones: ["Feature Build", "Integration", "Testing"],
   },
   {
@@ -33,14 +31,13 @@ const weeksData: WeekData[] = [
     title: "Polish & Launch",
     description:
       "Refinement, optimization, deployment, and post-launch monitoring",
-    taskCount: 7,
     milestones: ["Optimization", "Deployment", "Monitoring"],
   },
 ];
 
 export function Roadmap() {
   return (
-    <section id="roadmap" className="w-full py-20 bg-muted/30 scroll-mt-16">
+    <section id="roadmap" className="w-full py-20 bg-muted/30">
       <div className="max-w-6xl mx-auto px-4 space-y-12">
         {/* Section Header */}
         <div className="text-center space-y-4">
@@ -60,13 +57,6 @@ export function Roadmap() {
               key={week.week}
               className="relative p-6 border border-border/50 hover:border-border transition-colors hover:shadow-lg"
             >
-              {/* Week Badge */}
-              <div className="absolute -top-4 -left-4">
-                <div className="w-12 h-12 rounded-lg bg-primary text-primary-foreground flex items-center justify-center font-bold text-lg">
-                  W{week.week}
-                </div>
-              </div>
-
               {/* Content */}
               <div className="mt-2 space-y-4">
                 <div>
@@ -76,16 +66,6 @@ export function Roadmap() {
                   <p className="text-sm text-muted-foreground">
                     {week.description}
                   </p>
-                </div>
-
-                {/* Task Count */}
-                <div className="flex items-center gap-2 py-3 border-t border-b border-border/30">
-                  <span className="text-sm font-medium text-muted-foreground">
-                    Tasks:
-                  </span>
-                  <span className="text-lg font-bold text-accent">
-                    {week.taskCount}
-                  </span>
                 </div>
 
                 {/* Milestones */}
@@ -104,6 +84,9 @@ export function Roadmap() {
                     ))}
                   </ul>
                 </div>
+
+                {/* Week Badge */}
+                <Badge variant="default">Week {week.week}</Badge>
               </div>
             </Card>
           ))}
@@ -121,12 +104,6 @@ export function Roadmap() {
           >
             View the Timeline
           </Button>
-        </div>
-
-        {/* Timeline connector */}
-        <div className="hidden md:flex items-center justify-between px-4">
-          <div className="flex-1 h-1 bg-gradient-to-l from-accent/50 to-transparent" />
-          <div className="flex-1 h-1 bg-gradient-to-r from-accent/50 to-transparent" />
         </div>
       </div>
     </section>

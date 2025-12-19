@@ -4,25 +4,20 @@ export default function Day20251126() {
   return (
     <DateCard
       date="2025-11-26"
-      title="Navigation & Table Layouts"
-      summary="Added BackLink component and created reusable Table layouts for Inspirations and Collections."
+      title="Navigation & Checkout Implementation"
+      summary="Created BackLink navigation component, standardized table layouts, and implemented cart checkout functionality."
       tasks={[
-        "Create BackLink",
-        "Design table component",
-        "Update Inspirations page",
-        "Update Collections page",
-        "Consistent naming",
+        "Create consistent BackLink navigation component",
+        "Align table layouts",
+        "Remove shop filters",
+        "Add cart checkout (witout payment processing)",
       ]}
       skillsUsed={["React", "TypeScript", "Tailwind CSS", "Components"]}
       lessonsLearned={[
-        "Naming reduces confusion",
-        "Tables reduce duplication",
-        "BackLink improves UX",
+        "Consistent navigation improves UX",
+        "Table layouts reduce code duplication",
+        "Checkout process is critical for conversions",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `<Link href={href}><ChevronLeft />Back</Link>`,
-      }}
     />
   );
 }

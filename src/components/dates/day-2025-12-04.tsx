@@ -4,25 +4,20 @@ export default function Day20251204() {
   return (
     <DateCard
       date="2025-12-04"
-      title="Shipping & Branding UI Updates"
-      summary="Added shipping banner throughout site and updated product cards with featured collections."
+      title="UI Components & Featured Collections"
+      summary="Created reusable shipping banner and product card components, added featured collections, and fixed admin bugs."
       tasks={[
-        "Shipping banner",
-        "Add to pages",
-        "Update cards",
-        "Page padding",
-        "Featured collections",
+        "Add featured properties to collections pages",
+        "Fix admin logout bug when editing own profile",
+        "Add shipping banner component",
+        "Create product card component",
       ]}
-      skillsUsed={["React", "Tailwind CSS", "Design"]}
+      skillsUsed={["React", "Tailwind CSS", "Components"]}
       lessonsLearned={[
-        "Shipping builds confidence",
-        "Featured highlight offerings",
-        "Spacing improves design",
+        "Shipping messaging builds customer confidence",
+        "Featured content highlights key offerings",
+        "Reusable components reduce code duplication",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `<div className='bg-blue-50'>Free shipping</div>`,
-      }}
     />
   );
 }

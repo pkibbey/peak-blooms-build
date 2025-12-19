@@ -4,25 +4,24 @@ export default function Day20251124() {
   return (
     <DateCard
       date="2025-11-24"
-      title="Data Model Refinement & Cart API"
-      summary="Refined data model by removing stock fields and implemented batch cart API for bulk additions."
+      title="Admin, Auth & Product Variants"
+      summary="Added admin dashboard with user management, implemented product variants, route authentication, and refined data model."
       tasks={[
-        "Remove stock fields",
-        "Design batch API",
-        "Update button text",
-        "Optimize cart ops",
-        "Update UI",
+        "Introduce product variants",
+        "Add Admin dashboard with user management",
+        "Add route authentication",
+        "Add account signup",
+        "Refactor user status handling",
+        "Remove product stock tracking from the database",
+        "Refactor admin to use server rendering",
+        "Add product filtering in the shop",
       ]}
-      skillsUsed={["Prisma", "TypeScript", "REST API", "Next.js"]}
+      skillsUsed={["Prisma", "TypeScript", "Authentication", "Next.js"]}
       lessonsLearned={[
-        "Simplifying removes complexity",
-        "Batch ops more efficient",
-        "API anticipates workflows",
+        "Removing complexity improves usability",
+        "Authentication secures admin access",
+        "Variants provide product flexibility",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `const result = await prisma.cartItem.createMany({data: items.map(item => ({...item}))});`,
-      }}
     />
   );
 }

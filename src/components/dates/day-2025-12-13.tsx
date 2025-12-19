@@ -4,25 +4,20 @@ export default function Day20251213() {
   return (
     <DateCard
       date="2025-12-13"
-      title="Theme Refactoring & Component Updates"
-      summary="Simplified theme system and consolidated Cart and Order concepts."
+      title="UI Framework & Concept Consolidation"
+      summary="Simplified theme system, combined Cart and Order concepts, and migrated UI from Radix to BaseUI."
       tasks={[
-        "Simplify theme",
-        "Search spacing",
-        "Consolidate models",
-        "Rename routes",
-        "Update deps",
+        "Combine the Cart and Order concepts",
+        "Revert theme system to use a single theme",
+        "Replace RadixUI with BaseUI",
+        "Refactor all UI primitives to use BaseUI",
       ]}
-      skillsUsed={["React", "Tailwind", "Radix UI", "Prisma"]}
+      skillsUsed={["React", "Tailwind", "BaseUI", "TypeScript"]}
       lessonsLearned={[
-        "Simpler easier maintain",
-        "Consolidate reduces complexity",
-        "Updates keep current",
+        "Simpler systems are easier to maintain",
+        "Concept consolidation reduces model complexity",
+        "UI framework migration improves design consistency",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `model Order { id String status String items OrderItem[] }`,
-      }}
     />
   );
 }

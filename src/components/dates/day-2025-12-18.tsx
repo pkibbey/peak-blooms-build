@@ -4,25 +4,19 @@ export default function Day20251218() {
   return (
     <DateCard
       date="2025-12-18"
-      title="Order Model Refinement & Test Coverage"
-      summary="Made delivery address optional and implemented autoincrementing order numbers."
+      title="Test Coverage & Order Refinement"
+      summary="Achieved 80% code coverage with unit tests, simplified order number logic, and improved documentation."
       tasks={[
-        "Optional address",
-        "Autoincrement number",
-        "DB migration",
-        "Add tests",
-        "Update docs",
+        "Add unit tests to achieve 80% code coverage",
+        "Simplify order number logic",
+        "Clean up documentation",
       ]}
-      skillsUsed={["Prisma", "TypeScript", "Testing", "Database"]}
+      skillsUsed={["Testing", "TypeScript", "Prisma", "Documentation"]}
       lessonsLearned={[
-        "Optional enables flexibility",
-        "Autoincrement user-friendly",
-        "Tests ensure reliability",
+        "Comprehensive tests ensure reliability",
+        "Optional fields provide flexibility",
+        "Clear documentation aids maintenance",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `model Order { orderNumber Int @default(autoincrement()) deliveryAddressId String? }`,
-      }}
     />
   );
 }

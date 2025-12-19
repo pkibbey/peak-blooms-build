@@ -4,25 +4,21 @@ export default function Day20251127() {
   return (
     <DateCard
       date="2025-11-27"
-      title="Component Extraction & Account Management"
-      summary="Extracted shared components into library and implemented comprehensive account management pages."
+      title="Code Quality & Account Features"
+      summary="Added linting and formatting, extracted reusable components, reorganized admin, and built account management pages."
       tasks={[
-        "Extract shared components",
-        "Create utils library",
-        "Account pages",
-        "Profile editing",
-        "Update exports",
+        "Add biome.js for linting and code formatting",
+        "Convert admin tab layout to page views",
+        "Add shared card layout components",
+        "Refactor large components into smaller files",
+        "Create order history pages",
       ]}
-      skillsUsed={["React", "TypeScript", "Composition", "Refactoring"]}
+      skillsUsed={["React", "TypeScript", "Refactoring", "Code Quality"]}
       lessonsLearned={[
-        "Refactoring prevents duplication",
-        "Accounts improve retention",
-        "Organization enables speed",
+        "Component extraction reduces duplication",
+        "Account features improve user retention",
+        "Code formatting maintains consistency",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `export function useAccountSettings() { const [user, setUser] = useState(null); return { user }; }`,
-      }}
     />
   );
 }

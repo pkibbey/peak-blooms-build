@@ -4,25 +4,15 @@ export default function Day20251212() {
   return (
     <DateCard
       date="2025-12-12"
-      title="Route & Page Consolidation"
-      summary="Removed /support/shipping and directed users to /support/delivery."
-      tasks={[
-        "Remove shipping page",
-        "Update links",
-        "Component refs",
-        "Add redirects",
-        "Update docs",
-      ]}
+      title="Terminology & Route Consolidation"
+      summary="Unified shipping and delivery terminology across the application with consistent routing."
+      tasks={["Replace all shipping concepts with delivery terminology"]}
       skillsUsed={["Next.js", "TypeScript", "Routing"]}
       lessonsLearned={[
-        "Consolidation prevents fragmentation",
-        "Refactoring prevents broken links",
-        "Consistency improves UX",
+        "Consistent terminology prevents confusion",
+        "Route consolidation simplifies navigation",
+        "Refactoring maintains backward compatibility",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `export async function redirect() {destination: '/support/delivery'}`,
-      }}
     />
   );
 }

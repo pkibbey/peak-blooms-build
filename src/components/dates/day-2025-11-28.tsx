@@ -4,25 +4,21 @@ export default function Day20251128() {
   return (
     <DateCard
       date="2025-11-28"
-      title="Media Handling & Data Integrity"
-      summary="Implemented image upload functionality and enforced data integrity with non-nullable variants."
+      title="Media Management & Admin Features"
+      summary="Implemented image uploads with validation, added bulk product filters, quantity selectors, and standardized page headers."
       tasks={[
-        "Image upload component",
-        "Integrate with products",
-        "Non-null variants",
+        "Add boxlot filter for bulk products",
+        "Introduce Image upload to admin forms",
+        "Add consisent page headers",
         "Image validation",
-        "DB migrations",
+        "Add quantity selector to inspirations",
       ]}
-      skillsUsed={["React", "File handling", "Prisma", "TypeScript"]}
+      skillsUsed={["React", "File Handling", "Validation", "TypeScript"]}
       lessonsLearned={[
-        "Required fields ensure consistency",
-        "Upload needs validation",
-        "Constraints prevent bugs",
+        "Image validation prevents errors",
+        "Consistent headers improve navigation",
+        "Required fields ensure data integrity",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `<input type='file' accept='image/*' />`,
-      }}
     />
   );
 }

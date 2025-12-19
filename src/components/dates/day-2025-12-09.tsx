@@ -4,25 +4,21 @@ export default function Day20251209() {
   return (
     <DateCard
       date="2025-12-09"
-      title="Payment Model & Market Pricing"
-      summary="Removed billing address and added market price support for variants."
+      title="Auth & Production Optimization"
+      summary="Replaced magic link with Google auth, simplified checkout, optimized seed scripts, and added static rendering."
       tasks={[
-        "Remove address",
-        "Market price field",
-        "Update types",
-        "Add roses type",
-        "Update cart",
+        "Remove billing address from cart checkout",
+        "Replace magic link authentication with google auth",
+        "Fix seed script timeouts for production databases",
+        "Fix login url for production environment",
+        "Add static rendering for pages with static content",
       ]}
-      skillsUsed={["Prisma", "TypeScript", "E-commerce"]}
+      skillsUsed={["Prisma", "TypeScript", "OAuth"]}
       lessonsLearned={[
-        "Removing simplifies",
-        "Market pricing flexible",
-        "Clear terms prevent confusion",
+        "Google auth simplifies user experience",
+        "Static rendering improves performance",
+        "Production optimization prevents issues",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `model Variant { price Decimal isMarketPrice Boolean }`,
-      }}
     />
   );
 }

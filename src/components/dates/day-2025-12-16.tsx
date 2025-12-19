@@ -4,25 +4,21 @@ export default function Day20251216() {
   return (
     <DateCard
       date="2025-12-16"
-      title="Server Actions Migration & Type System"
-      summary="Refactored to server actions for cart, products, collections and unified type system."
+      title="Server Actions & Performance Refactoring"
+      summary="Migrated to server actions for all operations, added soft-delete and order snapshots, and moved user fetching to Nav."
       tasks={[
-        "Cart actions",
-        "Product actions",
-        "Collection actions",
-        "Type files",
-        "Update components",
+        "Move user fetching out of layout and into Nav component",
+        "Refactor API calls to use server actions for performance improvements",
+        "Add product soft-delete functionality",
+        "Save order snapshots to preserve price history",
+        "Refactor cart retreival to fix cart bug",
       ]}
-      skillsUsed={["Next.js", "TypeScript", "Server actions", "React"]}
+      skillsUsed={["Next.js", "TypeScript", "Server Actions", "React"]}
       lessonsLearned={[
-        "Actions reduce latency",
-        "Unified types improve IDE",
-        "Modular easier maintain",
+        "Server actions reduce latency and improve performance",
+        "Soft-delete preserves data integrity",
+        "Order snapshots maintain price history accuracy",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `'use server'; export async function addToCart(productId) {...}`,
-      }}
     />
   );
 }

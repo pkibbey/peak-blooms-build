@@ -4,25 +4,21 @@ export default function Day20251217() {
   return (
     <DateCard
       date="2025-12-17"
-      title="Testing Framework & Type Refactor"
-      summary="Added unit test framework and migrated admin/user APIs to server actions."
+      title="Testing & Type System Unification"
+      summary="Added vitest framework, completed server action migrations, refactored types to use generated Prisma types."
       tasks={[
-        "Test setup",
-        "Test files",
-        "Generated types",
-        "Admin migrations",
-        "User migrations",
+        "Refactor market price product support",
+        "Add order timeline component to communicate delivery status",
+        "Complete the refactor for the remaining APIs to server actions",
+        "Refactor type system to use generated prisma types",
+        "Add vitest framework to support unit testing",
       ]}
-      skillsUsed={["Testing", "TypeScript", "Prisma", "Actions"]}
+      skillsUsed={["Testing", "TypeScript", "Prisma", "Server Actions"]}
       lessonsLearned={[
-        "Tests catch regressions",
-        "Generated prevent updates",
-        "Batch improves perf",
+        "Unit tests catch regressions early",
+        "Generated types stay synchronized with schema",
+        "Testing frameworks automate quality assurance",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `describe('Cart', () => {it('adds item', () => {...})});`,
-      }}
     />
   );
 }

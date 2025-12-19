@@ -4,25 +4,20 @@ export default function Day20251205() {
   return (
     <DateCard
       date="2025-12-05"
-      title="Address Validation & Cart Features"
-      summary="Made company required and added quantity selectors to product cards."
+      title="Cart Features & Order Management"
+      summary="Added quantity selectors, cart reset, reorder from history, and local database setup for development."
       tasks={[
-        "Address validation",
-        "Quantity selector",
-        "Cart reset",
-        "Reorder quantity",
-        "Local DB",
+        "Add local database to improve development speed",
+        "Add quantity selector to product card",
+        "Add ability to reset cart",
+        "Allow users to Reorder from previous orders",
       ]}
-      skillsUsed={["Validation", "TypeScript", "React", "Prisma"]}
+      skillsUsed={["React", "TypeScript", "Prisma", "Validation"]}
       lessonsLearned={[
-        "Company improves accuracy",
-        "Selectors reduce steps",
-        "Local DB improves workflow",
+        "Quantity selectors improve shopping experience",
+        "Reorder from history increases convenience",
+        "Local databases accelerate development",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `const schema = z.object({company: z.string().min(1)});`,
-      }}
     />
   );
 }

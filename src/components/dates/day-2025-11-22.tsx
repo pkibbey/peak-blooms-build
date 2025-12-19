@@ -4,28 +4,28 @@ export default function Day20251122() {
   return (
     <DateCard
       date="2025-11-22"
-      title="Project Setup & UI Component Foundation"
-      summary="Initialized the Next.js project with TypeScript and established the design system foundation."
+      title="Project Setup & Design System"
+      summary="Initialized Next.js with TypeScript, established design system foundation, and created reusable UI components."
       tasks={[
         "Initialize Next.js project with TypeScript",
         "Set up Tailwind CSS",
-        "Create Button component with CVA",
-        "Implement class merging utility",
-        "Integrate Radix UI Slot pattern",
+        "Add ShadCN to streamline workflow",
+        "Create functional requirements and style guide",
+        "Add Navigation component",
+        "Add centralized icon system",
       ]}
-      skillsUsed={["Next.js", "TypeScript", "Tailwind CSS", "CVA", "Radix UI"]}
+      skillsUsed={[
+        "Next.js",
+        "TypeScript",
+        "Tailwind CSS",
+        "React",
+        "Radix UI",
+      ]}
       lessonsLearned={[
-        "Strong foundation reduces rework",
-        "CVA provides type safety",
-        "Slot pattern enables composition",
+        "Foundation reduces rework",
+        "Component composition enables flexibility",
+        "Design systems maintain consistency",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `const buttonVariants = cva(
-  'inline-flex rounded-md font-medium',
-  {variants: {variant: {default: 'bg-primary', outline: 'border border-input'}}}
-);`,
-      }}
     />
   );
 }

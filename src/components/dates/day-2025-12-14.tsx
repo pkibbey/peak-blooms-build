@@ -4,25 +4,19 @@ export default function Day20251214() {
   return (
     <DateCard
       date="2025-12-14"
-      title="Data Model Reorganization & NavSearch"
-      summary="Moved phone field to Address model and implemented NavSearch autocomplete."
+      title="Search & Data Model Refinement"
+      summary="Implemented site search in navigation, moved phone to Address model, and added price visibility controls."
       tasks={[
-        "Phone to address",
-        "Schema update",
-        "NavSearch component",
-        "Product search",
-        "Button refactor",
+        "Added site search to navigation header",
+        "Hide prices for unapproved users",
+        "Move phone from user model to address model",
       ]}
-      skillsUsed={["Prisma", "TypeScript", "React", "Autocomplete"]}
+      skillsUsed={["Prisma", "TypeScript", "Search", "React"]}
       lessonsLearned={[
-        "Per-address phone accurate",
-        "NavSearch improves discovery",
-        "Hidden prices drive signup",
+        "Site search improves product discovery",
+        "Per-address phone is more accurate",
+        "Hidden prices incentivize user signup",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `model Address { id String phone String userId String }`,
-      }}
     />
   );
 }

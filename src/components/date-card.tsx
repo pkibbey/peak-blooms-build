@@ -28,7 +28,6 @@ export function DateCard({
   tasks,
   skillsUsed,
   lessonsLearned,
-  codeSnippet,
   screenshot,
 }: DateComponentProps) {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -96,18 +95,6 @@ export function DateCard({
               ))}
             </div>
           </div>
-
-          {/* Code Snippet */}
-          {codeSnippet && (
-            <div>
-              <h4 className="font-semibold text-foreground mb-3">
-                Code Snippet
-              </h4>
-              <pre className="bg-muted border border-border/50 rounded-lg p-4 overflow-x-auto text-xs text-foreground/80">
-                <code>{codeSnippet.code}</code>
-              </pre>
-            </div>
-          )}
 
           {/* Screenshot */}
           {screenshot && (

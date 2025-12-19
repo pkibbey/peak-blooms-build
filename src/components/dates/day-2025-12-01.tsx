@@ -4,25 +4,19 @@ export default function Day20251201() {
   return (
     <DateCard
       date="2025-12-01"
-      title="Authentication Migration & Content Pages"
-      summary="Migrated from next-auth to better-auth and added company, support, and legal pages."
+      title="Auth Migration & Code Cleanup"
+      summary="Migrated from next-auth to better-auth, simplified admin layout, and removed dead code with knip."
       tasks={[
-        "Evaluate solutions",
-        "Migrate auth",
-        "Update config",
-        "Company page",
-        "Legal pages",
+        "Update admin sidebar and simplify admin layout",
+        "Add knip and remove all dead code",
+        "Replace next-auth with better-auth",
       ]}
       skillsUsed={["better-auth", "Next.js", "TypeScript", "OAuth"]}
       lessonsLearned={[
-        "Evaluate enables better fit",
-        "Phased reduces risk",
-        "Legal essential",
+        "Authentication library evaluation improves fit",
+        "Phased migrations reduce risk",
+        "Dead code removal improves maintainability",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `const auth = betterAuth({database: {db: prisma}});`,
-      }}
     />
   );
 }

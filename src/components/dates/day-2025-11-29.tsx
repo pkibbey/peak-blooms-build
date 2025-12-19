@@ -4,25 +4,19 @@ export default function Day20251129() {
   return (
     <DateCard
       date="2025-11-29"
-      title="Form Validation & Data Access Layer"
-      summary="Implemented comprehensive form validation and centralized Data Access Layer for read operations."
+      title="Validation & Data Architecture"
+      summary="Implemented comprehensive form validation with Zod, created unified Data Access Layer, and added price multiplier logic."
       tasks={[
-        "Create validation schemas",
-        "Field-level validation",
-        "Create DAL",
-        "Migrate reads",
-        "Error handling",
+        "Add price multiplier logic",
+        "Create unified Data Access Layer",
+        "Add form validation",
       ]}
-      skillsUsed={["Zod", "TypeScript", "React", "Patterns"]}
+      skillsUsed={["Zod", "TypeScript", "Data Access", "React"]}
       lessonsLearned={[
-        "Centralized validation prevents issues",
-        "DAL improves maintainability",
-        "Early validation improves UX",
+        "Centralized validation maintains consistency",
+        "DAL improves code maintainability",
+        "Early validation enhances user experience",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `const schema = z.object({name: z.string(), price: z.number()});`,
-      }}
     />
   );
 }

@@ -4,25 +4,15 @@ export default function Day20251211() {
   return (
     <DateCard
       date="2025-12-11"
-      title="Theme System & Schema Consolidation"
-      summary="Implemented light/dark mode with CSS variables and consolidated product variants."
-      tasks={[
-        "Theme provider",
-        "CSS variables",
-        "Replace colors",
-        "Consolidate variants",
-        "Phone validation",
-      ]}
-      skillsUsed={["CSS", "Context", "Prisma", "TypeScript"]}
+      title="Dark/Light Theme Implementation"
+      summary="Implemented theme system with light/dark mode toggle using CSS variables and context."
+      tasks={["Add Theme support with Dark/Light toggle switch"]}
+      skillsUsed={["CSS", "Context", "TypeScript", "React"]}
       lessonsLearned={[
-        "Variables enable theming",
-        "Consolidating reduces complexity",
-        "Phone needs intl handling",
+        "CSS variables enable flexible theming",
+        "Context provides theme state management",
+        "User preference improves accessibility",
       ]}
-      codeSnippet={{
-        language: "typescript",
-        code: `:root { --bg: 0 0% 100%; }`,
-      }}
     />
   );
 }
