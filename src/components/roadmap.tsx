@@ -1,6 +1,7 @@
-'use client';
+"use client";
 
-import { Card } from '@/components/ui/card';
+import { Card } from "@/components/ui/card";
+import { Button } from "./ui/button";
 
 interface WeekData {
   week: number;
@@ -13,24 +14,27 @@ interface WeekData {
 const weeksData: WeekData[] = [
   {
     week: 1,
-    title: 'Foundation & Planning',
-    description: 'Setting up the project infrastructure, design systems, and core architecture',
+    title: "Foundation & Planning",
+    description:
+      "Setting up the project infrastructure, design systems, and core architecture",
     taskCount: 7,
-    milestones: ['Project Setup', 'Design System', 'Component Foundation'],
+    milestones: ["Project Setup", "Design System", "Component Foundation"],
   },
   {
     week: 2,
-    title: 'Feature Development',
-    description: 'Building core features, integrating APIs, and implementing key functionality',
+    title: "Feature Development",
+    description:
+      "Building core features, integrating APIs, and implementing key functionality",
     taskCount: 7,
-    milestones: ['Feature Build', 'Integration', 'Testing'],
+    milestones: ["Feature Build", "Integration", "Testing"],
   },
   {
     week: 3,
-    title: 'Polish & Launch',
-    description: 'Refinement, optimization, deployment, and post-launch monitoring',
+    title: "Polish & Launch",
+    description:
+      "Refinement, optimization, deployment, and post-launch monitoring",
     taskCount: 7,
-    milestones: ['Optimization', 'Deployment', 'Monitoring'],
+    milestones: ["Optimization", "Deployment", "Monitoring"],
   },
 ];
 
@@ -40,9 +44,12 @@ export function Roadmap() {
       <div className="max-w-6xl mx-auto px-4 space-y-12">
         {/* Section Header */}
         <div className="text-center space-y-4">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Three-Week Journey</h2>
+          <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
+            Three-Week Journey
+          </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A comprehensive overview of the entire project timeline, broken down by week
+            A comprehensive overview of the entire project timeline, broken down
+            by week
           </p>
         </div>
 
@@ -63,14 +70,22 @@ export function Roadmap() {
               {/* Content */}
               <div className="mt-2 space-y-4">
                 <div>
-                  <h3 className="text-2xl font-bold text-foreground mb-2">{week.title}</h3>
-                  <p className="text-sm text-muted-foreground">{week.description}</p>
+                  <h3 className="text-2xl font-bold text-foreground mb-2">
+                    {week.title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground">
+                    {week.description}
+                  </p>
                 </div>
 
                 {/* Task Count */}
                 <div className="flex items-center gap-2 py-3 border-t border-b border-border/30">
-                  <span className="text-sm font-medium text-muted-foreground">Tasks:</span>
-                  <span className="text-lg font-bold text-accent">{week.taskCount}</span>
+                  <span className="text-sm font-medium text-muted-foreground">
+                    Tasks:
+                  </span>
+                  <span className="text-lg font-bold text-accent">
+                    {week.taskCount}
+                  </span>
                 </div>
 
                 {/* Milestones */}
@@ -82,7 +97,9 @@ export function Roadmap() {
                     {week.milestones.map((milestone, idx) => (
                       <li key={idx} className="flex items-start gap-2">
                         <span className="w-1.5 h-1.5 rounded-full bg-accent mt-1.5 flex-shrink-0" />
-                        <span className="text-sm text-foreground/70">{milestone}</span>
+                        <span className="text-sm text-foreground/70">
+                          {milestone}
+                        </span>
                       </li>
                     ))}
                   </ul>
@@ -92,11 +109,24 @@ export function Roadmap() {
           ))}
         </div>
 
+        {/* CTA */}
+        <div className="text-center pt-8">
+          <Button
+            onClick={() => {
+              const element = document.getElementById("dates");
+              element?.scrollIntoView({ behavior: "smooth" });
+            }}
+            variant="default"
+            size="lg"
+          >
+            View the Timeline
+          </Button>
+        </div>
+
         {/* Timeline connector */}
         <div className="hidden md:flex items-center justify-between px-4">
-          {[1, 2].map((i) => (
-            <div key={i} className="flex-1 h-1 bg-gradient-to-r from-accent/50 to-transparent mx-2" />
-          ))}
+          <div className="flex-1 h-1 bg-gradient-to-l from-accent/50 to-transparent" />
+          <div className="flex-1 h-1 bg-gradient-to-r from-accent/50 to-transparent" />
         </div>
       </div>
     </section>

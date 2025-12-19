@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import { Button } from '@/components/ui/button';
+import { Button } from "@/components/ui/button";
 
 export function Hero() {
   return (
@@ -15,20 +15,22 @@ export function Hero() {
         {/* Main heading */}
         <div className="space-y-4">
           <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-foreground via-accent to-foreground bg-clip-text text-transparent">
-              Building in Three Weeks
+            <span className="bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+              Building Peak Blooms
             </span>
           </h1>
 
           <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-2xl mx-auto">
-            A comprehensive journey documenting the design, development, and deployment of a modern web platform in just 21 days
+            A comprehensive journey documenting the design, development, and
+            deployment of a modern web platform in just 21 days
           </p>
         </div>
 
         {/* Subheading */}
         <div className="space-y-2 pt-4">
           <p className="text-lg text-foreground/70">
-            Explore progress milestones, key learnings, technical decisions, and the challenges that shaped this project
+            Explore progress milestones, key learnings, technical decisions, and
+            the challenges that shaped this project
           </p>
         </div>
 
@@ -36,8 +38,8 @@ export function Hero() {
         <div className="pt-8">
           <Button
             onClick={() => {
-              const element = document.getElementById('roadmap');
-              element?.scrollIntoView({ behavior: 'smooth' });
+              const element = document.getElementById("roadmap");
+              element?.scrollIntoView({ behavior: "smooth" });
             }}
             variant="default"
             size="lg"

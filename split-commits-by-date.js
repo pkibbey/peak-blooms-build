@@ -48,6 +48,6 @@ Object.entries(commitsByDate).forEach(([date, commits]) => {
 });
 
 console.log(
-  `\n✓ Successfully split ${commitsData.totalCommits} commits into ${filesCreated} date-based files`
+  `\n✓ Successfully split ${commitsData.totalCommits} commits into ${filesCreated} date-based files`,
 );
 console.log(`Files saved to: ${commitsDir}`);

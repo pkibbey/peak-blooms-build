@@ -1,11 +1,9 @@
 import * as fs from "node:fs";
 import * as path from "node:path";
-import { fileURLToPath } from "node:url";
 import dotenv from "dotenv";
 
-// Load environment variables from .env.local
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-dotenv.config({ path: path.join(__dirname, '.env.local') });
+// Load environment variables
+dotenv.config();
 
 // Repository details
 const owner = "pkibbey";
