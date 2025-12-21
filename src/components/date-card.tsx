@@ -2,20 +2,34 @@
 
 import { differenceInDays } from "date-fns";
 import Image from "next/image";
+import type { ReactNode } from "react";
 import { ChevronDown } from "tabler-icons-react";
 import {
   Collapsible,
   CollapsibleContent,
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
+
+interface Task {
+  name: string;
+  lesson?: {
+    icon: ReactNode;
+    description: string;
+  };
+}
 
 interface DateComponentProps {
   date: string;
   title: string;
   summary: string;
-  tasks: string[];
+  tasks: Task[];
   skillsUsed: string[];
-  lessonsLearned: string[];
   codeSnippet?: {
     language: string;
     code: string;
@@ -28,8 +42,6 @@ export function DateCard({
   title,
   summary,
   tasks,
-  skillsUsed,
-  lessonsLearned,
   screenshot,
 }: DateComponentProps) {
   return (
@@ -58,7 +70,7 @@ export function DateCard({
           </div>
         </div>
       </CollapsibleTrigger>
-      <CollapsibleContent className="px-6 pt-6 pb-8 grid grid-cols-2 gap-6 border-t border-border/30 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:collapse">
+      <CollapsibleContent className="px-6 pt-6 pb-8 grid gap-6 border-t border-border/30 data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:collapse">
         {/* Tasks */}
         <div>
           <h4 className="font-semibold text-foreground mb-3">
@@ -68,7 +80,34 @@ export function DateCard({
             {tasks.map((task, idx) => (
               <li key={idx} className="flex items-start gap-3">
                 <span className="w-1.5 h-1.5 rounded-full bg-primary mt-2 flex-shrink-0" />
-                <span className="text-sm text-foreground/70">{task}</span>
+                {task.lesson ? (
+                  <HoverCard>
+                    <HoverCardTrigger className="text-base text-foreground/70 cursor-help underline decoration-dotted hover:text-foreground">
+                      {task.name}
+                    </HoverCardTrigger>
+                    <HoverCardPositioner
+                      side="right"
+                      align="start"
+                      sideOffset={16}
+                      alignOffset={-16}
+                    >
+                      <HoverCardContent className="md:w-128">
+                        <div className="flex items-start gap-3">
+                          <div className="flex-shrink-0 mt-0.5">
+                            {task.lesson.icon}
+                          </div>
+                          <p className="text-sm text-popover-foreground">
+                            {task.lesson.description}
+                          </p>
+                        </div>
+                      </HoverCardContent>
+                    </HoverCardPositioner>
+                  </HoverCard>
+                ) : (
+                  <span className="text-base text-foreground-muted">
+                    {task.name}
+                  </span>
+                )}
               </li>
             ))}
           </ul>
@@ -90,21 +129,6 @@ export function DateCard({
               </div>
             </div>
           )}
-
-          {/* Lessons Learned */}
-          <div>
-            <h4 className="font-semibold text-foreground mb-3">
-              Lessons Learned
-            </h4>
-            <ul className="space-y-2">
-              {lessonsLearned.map((lesson, idx) => (
-                <li key={idx} className="flex items-start gap-3">
-                  <span className="w-1.5 h-1.5 rounded-full bg-accent mt-2 flex-shrink-0" />
-                  <span className="text-sm text-foreground/70">{lesson}</span>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
       </CollapsibleContent>
     </Collapsible>

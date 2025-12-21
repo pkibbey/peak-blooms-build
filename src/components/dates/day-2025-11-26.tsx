@@ -1,4 +1,5 @@
 import { DateCard } from "@/components/date-card";
+import { InfoCircle, Stack } from "tabler-icons-react";
 
 export default function Day20251126() {
   return (
@@ -7,17 +8,26 @@ export default function Day20251126() {
       title="Navigation & Checkout Implementation"
       summary="Created BackLink navigation component, standardized table layouts, and implemented cart checkout functionality."
       tasks={[
-        "Create consistent BackLink navigation component",
-        "Align table layouts",
-        "Remove shop filters",
-        "Add cart checkout (witout payment processing)",
+        {
+          name: "Create consistent BackLink navigation component",
+          lesson: {
+            icon: <InfoCircle size={16} />,
+            description:
+              "Consistent navigation improves UX. A standardized back navigation component helps users move through the application intuitively and reduces friction.",
+          },
+        },
+        {
+          name: "Align table layouts",
+          lesson: {
+            icon: <Stack size={16} />,
+            description:
+              "Table layouts reduce code duplication. Creating shared table layouts and styles eliminates repetitive code and makes maintenance easier.",
+          },
+        },
+        { name: "Remove shop filters" },
+        { name: "Add cart checkout (witout payment processing)" },
       ]}
       skillsUsed={["React", "TypeScript", "Tailwind CSS", "Components"]}
-      lessonsLearned={[
-        "Consistent navigation improves UX",
-        "Table layouts reduce code duplication",
-        "Checkout process is critical for conversions",
-      ]}
     />
   );
 }
