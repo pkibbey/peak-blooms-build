@@ -27,6 +27,7 @@ import {
 } from "@/components/dates";
 import { Hero } from "@/components/hero";
 import { Roadmap } from "@/components/roadmap";
+import { Lessons } from "@/components/lessons";
 
 export default function DatesPage() {
   const week1 = [
@@ -139,6 +140,9 @@ export default function DatesPage() {
           ))}
         </div>
       </section>
+
+      {/* Lessons Section */}
+      <Lessons />
 
       {/* Footer */}
       <footer className="w-full py-12 bg-muted">

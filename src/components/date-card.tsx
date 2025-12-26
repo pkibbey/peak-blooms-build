@@ -3,6 +3,7 @@
 import { differenceInDays } from "date-fns";
 import Image from "next/image";
 import type { ReactNode } from "react";
+import { Dialog, DialogContent, DialogTrigger, DialogClose } from "@/components/ui/dialog";
 
 interface DateComponentProps {
   date: string;
@@ -31,21 +32,31 @@ export function DateCard({
           {taskNode}
         </div>
 
+        {/* Screenshot */}
         {screenshot && (
-          <div className="space-y-6">
-            {/* Screenshot */}
-            <div>
-              <div className="rounded-lg overflow-hidden border border-border/70 shadow-2xs">
+          <Dialog>
+            <DialogTrigger className="group relative block aspect-video w-full overflow-hidden rounded-lg border border-border/70 shadow-2xs transition-all cursor-zoom-in outline-none">
+              <Image
+                src={screenshot}
+                alt={`Date ${date} screenshot`}
+                fill
+                className="object-cover bg-muted transition-transform duration-300 group-hover:scale-102"
+              />
+              <div className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/5" />
+            </DialogTrigger>
+            <DialogContent className="max-w-[95vw] max-h-[95vh] p-4 overflow-hidden border-none bg-transparent shadow-none">
+              <DialogClose className="relative w-full h-full flex items-center justify-center cursor-zoom-out outline-none">
                 <Image
                   src={screenshot}
-                  alt={`Date ${date} screenshot`}
-                  width={800}
-                  height={600}
-                  className="w-full h-auto bg-muted"
+                  alt={`Date ${date} screenshot full`}
+                  width={1800}
+                  height={1200}
+                  className="max-w-full max-h-[90vh] h-auto w-auto object-contain rounded-lg shadow-md transition-all duration-300"
+                  priority
                 />
-              </div>
-            </div>
-          </div>
+              </DialogClose>
+            </DialogContent>
+          </Dialog>
         )}
       </div>
     </div>

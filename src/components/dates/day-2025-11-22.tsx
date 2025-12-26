@@ -120,7 +120,7 @@ export default function Day20251122() {
             </HoverCardContent>
           </HoverCardPositioner>
         </HoverCard>
-        . Also added a navigation header with page links.
+        . Added navigation header with site links.
       </p>
     </div>
   );

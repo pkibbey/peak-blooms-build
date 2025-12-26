@@ -26,6 +26,7 @@ export default function Day20251124() {
       title="Authentication & Product filtering"
       taskNode={taskNode}
       skillsUsed={["Prisma", "TypeScript", "Authentication", "Next.js"]}
+      screenshot="/screenshots/day-3.png"
     />
   );
 }

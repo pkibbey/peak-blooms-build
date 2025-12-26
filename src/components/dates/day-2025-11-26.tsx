@@ -58,6 +58,7 @@ export default function Day20251126() {
       title="Navigation & Checkout Implementation"
       taskNode={taskNode}
       skillsUsed={["React", "TypeScript", "Tailwind CSS", "Components"]}
+      screenshot="/screenshots/day-5.png"
     />
   );
 }
