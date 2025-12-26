@@ -76,6 +76,7 @@ export default function Day20251208() {
       title="Metrics System & Admin Management"
       taskNode={taskNode}
       skillsUsed={["Prisma", "Next.js", "Metrics", "TypeScript"]}
+      screenshot="/screenshots/2025-12-08.png"
     />
   );
 }

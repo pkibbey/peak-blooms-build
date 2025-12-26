@@ -75,10 +75,10 @@ export function Roadmap() {
             >
               {/* Content */}
               <div className="mt-2">
-                <p className="flex flex-col gap-2 text-sm font-semibold text-muted-foreground mb-2 tracking-wide">
+                <p className="flex flex-col gap-2 text-base font-semibold text-muted-foreground mb-2 tracking-wide">
                   <Badge
                     variant="default"
-                    className="w-fit group-hover:bg-primary transition-colors"
+                    className="w-fit text-xs group-hover:bg-primary transition-colors"
                   >
                     Week {week.week}
                   </Badge>

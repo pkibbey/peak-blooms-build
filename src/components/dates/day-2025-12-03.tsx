@@ -14,7 +14,7 @@ export default function Day20251203() {
         Added{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
-            global search
+            product search
           </HoverCardTrigger>
           <HoverCardPositioner side="right" align="start">
             <HoverCardContent className="md:w-96">
@@ -47,10 +47,10 @@ export default function Day20251203() {
             </HoverCardContent>
           </HoverCardPositioner>
         </HoverCard>
-        , and enabled{" "}
+        , and enabled collections to have{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
-            many-to-many collections
+            many-to-many relationships
           </HoverCardTrigger>
           <HoverCardPositioner side="right" align="start">
             <HoverCardContent className="md:w-96">
@@ -64,8 +64,8 @@ export default function Day20251203() {
               </div>
             </HoverCardContent>
           </HoverCardPositioner>
-        </HoverCard>
-        .
+        </HoverCard>{" "}
+        with products.
       </p>
     </div>
   );

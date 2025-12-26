@@ -57,6 +57,7 @@ export default function Day20251214() {
       title="Search & Data Model Refinement"
       taskNode={taskNode}
       skillsUsed={["Prisma", "TypeScript", "Search", "React"]}
+      screenshot="/screenshots/2025-12-14.png"
     />
   );
 }

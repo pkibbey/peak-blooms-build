@@ -75,6 +75,7 @@ export default function Day20251215() {
       title="Build Fixes & Type Unification"
       taskNode={taskNode}
       skillsUsed={["Build Tools", "Next.js", "TypeScript"]}
+      screenshot="/screenshots/2025-12-15.png"
     />
   );
 }

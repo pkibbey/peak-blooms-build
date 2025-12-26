@@ -57,6 +57,7 @@ export default function Day20251217() {
       title="Testing & Type System Unification"
       taskNode={taskNode}
       skillsUsed={["Testing", "TypeScript", "Prisma", "Server Actions"]}
+      screenshot="/screenshots/2025-12-17.png"
     />
   );
 }

@@ -29,7 +29,7 @@ export default function Day20251210() {
             </HoverCardContent>
           </HoverCardPositioner>
         </HoverCard>
-        . Optimized performance by{" "}
+        . Reduce database overhead by{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
             disabling prefetch
@@ -46,11 +46,30 @@ export default function Day20251210() {
               </div>
             </HoverCardContent>
           </HoverCardPositioner>
-        </HoverCard>{" "}
-        and used{" "}
+        </HoverCard>
+        . Removed product variants for being{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
-            generated types
+            overly complicated
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Bulb size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  I opted for a simpler solution, where I forced one variant per
+                  product, and added in a multiple products to describe the
+                  variants. This could be done because the products will be
+                  known ahead of time, and won't change much.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        , and used{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            generated Prisma types
           </HoverCardTrigger>
           <HoverCardPositioner side="right" align="start">
             <HoverCardContent className="md:w-96">
@@ -63,8 +82,8 @@ export default function Day20251210() {
               </div>
             </HoverCardContent>
           </HoverCardPositioner>
-        </HoverCard>
-        . Also removed product variants for being overly complicated.
+        </HoverCard>{" "}
+        instead of static ones.
       </p>
     </div>
   );
@@ -75,6 +94,7 @@ export default function Day20251210() {
       title="Performance & Type System Updates"
       taskNode={taskNode}
       skillsUsed={["Next.js", "TypeScript", "Optimization"]}
+      screenshot="/screenshots/2025-12-10.png"
     />
   );
 }

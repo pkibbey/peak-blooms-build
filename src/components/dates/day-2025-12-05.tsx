@@ -11,10 +11,10 @@ export default function Day20251205() {
   const taskNode = (
     <div>
       <p className="text-base text-foreground-muted leading-relaxed">
-        Configured a{" "}
+        Switched to a{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
-            local database
+            local database instead of remote
           </HoverCardTrigger>
           <HoverCardPositioner side="right" align="start">
             <HoverCardContent className="md:w-96">
@@ -29,7 +29,7 @@ export default function Day20251205() {
             </HoverCardContent>
           </HoverCardPositioner>
         </HoverCard>
-        . Added{" "}
+        . Added product{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
             quantity selectors

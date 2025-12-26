@@ -58,6 +58,7 @@ export default function Day20251213() {
       title="UI Framework & Concept Consolidation"
       taskNode={taskNode}
       skillsUsed={["React", "Tailwind", "BaseUI", "TypeScript"]}
+      screenshot="/screenshots/2025-12-13.png"
     />
   );
 }

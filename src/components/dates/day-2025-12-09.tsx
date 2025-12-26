@@ -29,10 +29,27 @@ export default function Day20251209() {
             </HoverCardContent>
           </HoverCardPositioner>
         </HoverCard>
-        . Simplified checkout, optimized seed scripts, and implemented{" "}
+        . Simplified{" "}
         <HoverCard>
           <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
-            static rendering
+            checkout
+          </HoverCardTrigger>
+          <HoverCardPositioner side="right" align="start">
+            <HoverCardContent className="md:w-96">
+              <div className="flex items-start gap-3">
+                <Flame size={16} className="flex-shrink-0 mt-0.5" />
+                <p className="text-sm text-popover-foreground">
+                  Simplified checkout experience. Streamlined the checkout
+                  process to focus on essential steps.
+                </p>
+              </div>
+            </HoverCardContent>
+          </HoverCardPositioner>
+        </HoverCard>
+        , optimized seed scripts, and implemented{" "}
+        <HoverCard>
+          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+            ISR
           </HoverCardTrigger>
           <HoverCardPositioner side="right" align="start">
             <HoverCardContent className="md:w-96">
@@ -57,6 +74,7 @@ export default function Day20251209() {
       title="Auth & Production Optimization"
       taskNode={taskNode}
       skillsUsed={["Prisma", "TypeScript", "OAuth"]}
+      screenshot="/screenshots/2025-12-09.png"
     />
   );
 }
