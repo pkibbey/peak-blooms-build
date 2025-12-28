@@ -1,6 +1,13 @@
 "use client";
 
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
+import {
+  HoverCard,
+  HoverCardContent,
+  HoverCardPositioner,
+  HoverCardTrigger,
+} from "@/components/ui/hover-card";
 
 export function Hero() {
   return (
@@ -13,24 +20,47 @@ export function Hero() {
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Main heading */}
-        <div className="space-y-4">
-          <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold tracking-tight">
-            <span className="bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
-              Building Peak Blooms
+        <div className="space-y-8">
+          <h1 className="grid text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
+            <span className="leading-20 text-8xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
+              How I built
+            </span>
+            <span className="text-gray-800 text-5xl font-bold">
+              Peak Blooms
             </span>
           </h1>
 
-          <p className="text-xl md:text-2xl text-muted-foreground font-light max-w-3xl mx-auto">
-            A comprehensive journey documenting the design, development, and
-            deployment of a modern web platform.
-          </p>
-        </div>
-
-        {/* Subheading */}
-        <div className="space-y-2 pt-4">
-          <p className="text-lg text-foreground/70">
-            Explore progress milestones, key learnings, technical decisions, and
-            the challenges that shaped this project.
+          <p className="text-xl md:text-2xl leading-8 text-muted-foreground font-light max-w-3xl mx-auto">
+            A detailed journey documenting how I designed, developed, and
+            deployed a modern web platform, by{" "}
+            <HoverCard>
+              <HoverCardTrigger
+                target="_blank"
+                href="https://github.com/pkibbey"
+                className="text-primary cursor-help underline decoration-dotted hover:text-primary/80"
+              >
+                Phineas Kibbey
+              </HoverCardTrigger>
+              <HoverCardPositioner side="top">
+                <HoverCardContent className="mb-4 p-0 border-0 bg-transparent shadow-none">
+                  <a
+                    href="https://github.com/pkibbey"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block cursor-pointer hover:opacity-90 transition-opacity"
+                  >
+                    <Image
+                      width={2248}
+                      height={1298}
+                      src="/github.png"
+                      alt="GitHub profile preview"
+                      className="w-80 rounded-lg shadow-lg"
+                    />
+                  </a>
+                </HoverCardContent>
+              </HoverCardPositioner>
+            </HoverCard>
+            .
           </p>
         </div>
 

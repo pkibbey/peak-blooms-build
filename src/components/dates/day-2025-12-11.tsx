@@ -10,27 +10,25 @@ import {
 export default function Day20251211() {
   const taskNode = (
     <div>
-      <p className="text-base text-foreground-muted leading-relaxed">
-        Implemented a{" "}
-        <HoverCard>
-          <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
-            theme system with dark/light mode toggle
-          </HoverCardTrigger>
-          <HoverCardPositioner side="right" align="start">
-            <HoverCardContent className="md:w-96">
-              <div className="flex items-start gap-3">
-                <Bulb size={16} className="flex-shrink-0 mt-0.5" />
-                <p className="text-sm text-popover-foreground">
-                  CSS variables enable flexible theming. CSS custom properties
-                  allow dynamic theme switching without duplicating styles.
-                  Context provides theme state management across the app.
-                </p>
-              </div>
-            </HoverCardContent>
-          </HoverCardPositioner>
-        </HoverCard>
-        .
-      </p>
+      Implemented a{" "}
+      <HoverCard>
+        <HoverCardTrigger className="text-primary cursor-help underline decoration-dotted hover:text-primary/80">
+          theme system with dark/light mode toggle
+        </HoverCardTrigger>
+        <HoverCardPositioner side="right" align="start">
+          <HoverCardContent className="md:w-96">
+            <div className="flex items-start gap-3">
+              <Bulb size={16} className="flex-shrink-0 mt-0.5" />
+              <p className="text-sm text-popover-foreground">
+                CSS variables enable flexible theming. CSS custom properties
+                allow dynamic theme switching without duplicating styles.
+                Context provides theme state management across the app.
+              </p>
+            </div>
+          </HoverCardContent>
+        </HoverCardPositioner>
+      </HoverCard>
+      .
     </div>
   );
 

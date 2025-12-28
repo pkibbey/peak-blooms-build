@@ -1,4 +1,9 @@
+"use client";
+
+import type { ComponentType } from "react";
+import { useState } from "react";
 import { Badge } from "@/components/ui/badge";
+import type { DateCardProps } from "./date-card";
 import {
   Day20251122,
   Day20251123,
@@ -26,58 +31,56 @@ import {
   Day20251217,
   Day20251218,
 } from "./dates";
+import { weeksMetadata } from "./dates-metadata";
+import { Accordion } from "./ui/accordion";
 
-const weeks = [
-  {
-    id: "week-1",
-    title: "Foundation & Design System",
-    description: "Setting up project infrastructure and core components",
-    dates: [
-      Day20251122,
-      Day20251123,
-      Day20251124,
-      Day20251125,
-      Day20251126,
-      Day20251127,
-      Day20251128,
-    ],
-  },
-  {
-    id: "week-2",
-    title: "Core Features & Data Layer",
-    description: "Building validation and data architecture",
-    dates: [
-      Day20251129,
-      Day20251130,
-      Day20251201,
-      Day20251202,
-      Day20251203,
-      Day20251204,
-      Day20251205,
-    ],
-  },
-  {
-    id: "week-3",
-    title: "Advanced Features & Optimization",
-    description: "Metrics system and performance improvements",
-    dates: [Day20251208, Day20251209, Day20251210, Day20251211, Day20251212],
-  },
-  {
-    id: "week-4",
-    title: "Performance, Testing & Polish",
-    description: "Final refinements and deployment preparation",
-    dates: [
-      Day20251213,
-      Day20251214,
-      Day20251215,
-      Day20251216,
-      Day20251217,
-      Day20251218,
-    ],
-  },
-];
+const datesByWeek: Record<number, ComponentType<DateCardProps>[]> = {
+  1: [
+    Day20251122,
+    Day20251123,
+    Day20251124,
+    Day20251125,
+    Day20251126,
+    Day20251127,
+    Day20251128,
+  ],
+  2: [
+    Day20251129,
+    Day20251130,
+    Day20251201,
+    Day20251202,
+    Day20251203,
+    Day20251204,
+    Day20251205,
+  ],
+  3: [Day20251208, Day20251209, Day20251210, Day20251211, Day20251212],
+  4: [
+    Day20251213,
+    Day20251214,
+    Day20251215,
+    Day20251216,
+    Day20251217,
+    Day20251218,
+  ],
+};
+
+const weeks = weeksMetadata.map((week) => ({
+  ...week,
+  dates: datesByWeek[week.week] || [],
+}));
 
 export function DailyCards() {
+  const [openDate, setOpenDate] = useState<string | null>(null);
+  console.log("openDate: ", openDate);
+
+  const handleDateOpenChange = (date: string, isOpen: boolean) => {
+    if (isOpen) {
+      setOpenDate(date);
+    } else if (openDate === date) {
+      setOpenDate(null);
+    }
+  };
+
   return (
     <section id="dates" className="w-full py-20 bg-background">
       <div className="max-w-4xl mx-auto px-4 space-y-24">
@@ -111,9 +114,27 @@ export function DailyCards() {
             </div>
 
             <div className="grid grid-cols-1 gap-4">
-              {week.dates.map((DateComponent, index) => (
-                <DateComponent key={index} />
-              ))}
+              <Accordion>
+                {week.dates.map((DateComponent, index) => {
+                  const dateString = DateComponent.name.replace("Day", "");
+                  const year = dateString.slice(0, 4);
+                  const month = dateString.slice(4, 6);
+                  const day = dateString.slice(6, 8);
+                  const formattedDate = `${year}-${month}-${day}`;
+
+                  return (
+                    <DateComponent
+                      key={index}
+                      isOpen={openDate === formattedDate}
+                      onOpenChange={(isOpen: boolean) => {
+                        console.log("isOpen: ", isOpen);
+
+                        handleDateOpenChange(formattedDate, isOpen);
+                      }}
+                    />
+                  );
+                })}
+              </Accordion>
             </div>
           </div>
         ))}
