@@ -26,20 +26,6 @@ const lessons: Lesson[] = [
     icon: <Code size={20} />,
     tag: "Productivity",
   },
-  {
-    title: "Type Safety as a Safety Net",
-    description:
-      "Type safety isn't just about catching bugs; it's about documenting intent. When you come back to code months later, the types are your best friend.",
-    icon: <Activity size={20} />,
-    tag: "Quality",
-  },
-  {
-    title: "Listen to the Friction",
-    description:
-      "If a feature feels hard to implement, it's often because the underlying architecture or the design itself is flawed. Step back and re-evaluate.",
-    icon: <Users size={20} />,
-    tag: "Experience",
-  },
 ];
 
 export function Lessons() {

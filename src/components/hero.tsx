@@ -73,6 +73,7 @@ export function Hero() {
             }}
             variant="default"
             size="lg"
+            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
           >
             View the Journey
           </Button>

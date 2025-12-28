@@ -2,6 +2,7 @@ import { DailyCards } from "@/components/daily-cards";
 import { Hero } from "@/components/hero";
 import { Lessons } from "@/components/lessons";
 import { Roadmap } from "@/components/roadmap";
+import { SourceCode } from "@/components/source-code";
 
 export default function DatesPage() {
   return (
@@ -17,6 +18,9 @@ export default function DatesPage() {
 
       {/* Lessons Section */}
       <Lessons />
+
+      {/* Source Code Section */}
+      <SourceCode />
 
       {/* Footer */}
       <footer className="w-full py-12 bg-muted">
