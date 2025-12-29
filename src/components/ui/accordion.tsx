@@ -15,6 +15,7 @@ function Accordion({ ...props }: AccordionPrimitive.Root.Props) {
 function AccordionItem({ className, ...props }: AccordionPrimitive.Item.Props) {
   return (
     <AccordionPrimitive.Item
+      tabIndex={-1}
       data-slot="accordion-item"
       className={cn("border-b last:border-b-0", className)}
       {...props}

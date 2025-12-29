@@ -56,7 +56,8 @@ function renderSegments(segments: InlineSegment[]) {
           key={i}
           href={seg.href}
           target={seg.blank ? "_blank" : undefined}
-          className="text-primary underline"
+          className="text-primary underline focus-visible:ring-ring/50 focus-visible:ring-[3px] focus-visible:ring-offset-2 rounded-sm outline-none"
+          tabIndex={0}
         >
           {seg.text}
         </a>

@@ -4,7 +4,6 @@ import { Card } from "@/components/ui/card";
 import { weeksMetadata } from "./dates-metadata";
 import ImageBehindButton from "./image-behind-button";
 import { Badge } from "./ui/badge";
-import { Button } from "./ui/button";
 
 export function Roadmap() {
   return (
@@ -31,6 +30,7 @@ export function Roadmap() {
                 const element = document.getElementById(`week-${week.week}`);
                 element?.scrollIntoView({ behavior: "smooth" });
               }}
+              tabIndex={0}
             >
               {/* Content */}
               <div className="mt-2">

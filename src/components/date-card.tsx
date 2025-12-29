@@ -56,7 +56,7 @@ export function DateCard({ dateKey }: DateCardProps) {
   return (
     <div
       ref={itemRef}
-      className="scroll-my-12 hover:shadow-xl transition-shadow"
+      className="scroll-my-12 hover:shadow-xl focus-within:shadow-xl transition-all outline-none"
     >
       <AccordionItem
         value={date}
@@ -64,7 +64,7 @@ export function DateCard({ dateKey }: DateCardProps) {
       >
         <AccordionTrigger
           ref={triggerRef}
-          className="p-4 relative overflow-hidden flex flex-1 justify-between items-center w-full hover:bg-white group-open:bg-white transition-colors text-lg font-bold [&[data-panel-open]]:rounded-lg "
+          className="focus-visible:outline-primary/10 p-4 relative overflow-hidden flex flex-1 justify-between items-center w-full hover:bg-white group-open:bg-white transition-colors text-lg font-bold rounded-md focus-visible:ring-0"
         >
           <div className="flex flex-col md:flex-row flex-1 md:justify-between md:items-center gap-2">
             {date && title && (
@@ -87,7 +87,7 @@ export function DateCard({ dateKey }: DateCardProps) {
         </AccordionTrigger>
 
         {/* Accordion Content */}
-        <AccordionContent className="bg-white px-4 pb-5 grid md:grid-cols-[auto_300px] gap-8">
+        <AccordionContent className="bg-white px-4 pb-5 pt-2 grid md:grid-cols-[auto_300px] gap-8">
           <div className="text-lg text-foreground-muted leading-relaxed">
             {/* Tasks */}
             <TaskRenderer tasks={dayData?.tasks} />
@@ -96,7 +96,7 @@ export function DateCard({ dateKey }: DateCardProps) {
           {/* Screenshot */}
           {screenshot && (
             <Dialog>
-              <DialogTrigger className="py-6 group relative block aspect-video w-full overflow-hidden rounded-lg border border-border/70 shadow-2xs transition-all cursor-zoom-in outline-none">
+              <DialogTrigger className="py-6 group relative block aspect-video w-full rounded-lg border border-border/70 shadow-2xs transition-all cursor-zoom-in focus-ring">
                 <Image
                   src={screenshot}
                   alt={`Date ${date} screenshot`}
