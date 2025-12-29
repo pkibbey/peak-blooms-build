@@ -22,7 +22,7 @@ export function Roadmap() {
         </div>
 
         {/* Weeks Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:px-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {weeksMetadata.map((week) => (
             <Card
               key={week.week}
