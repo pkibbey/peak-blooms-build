@@ -69,7 +69,7 @@ const weeks = weeksMetadata.map((week) => ({
 
 export function DailyCards() {
   return (
-    <section id="dates" className="w-full py-20 bg-background">
+    <section id="dates" className="w-full py-20 bg-white/80">
       <div className="max-w-4xl mx-auto px-4 space-y-24">
         {/* Section Header */}
         <div className="text-center space-y-4">

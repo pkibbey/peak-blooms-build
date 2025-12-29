@@ -2,8 +2,8 @@
 
 import { differenceInDays } from "date-fns";
 import Image from "next/image";
-import type { ReactNode } from "react";
 import { useEffect, useRef } from "react";
+import TaskRenderer from "@/components/dates/task-renderer";
 import { daysMetadata } from "@/components/dates-metadata";
 import {
   AccordionContent,
@@ -16,16 +16,14 @@ import {
   DialogContent,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
 import { Badge } from "./ui/badge";
 
 export interface DateCardProps {
   dateKey: string;
-  taskNode: ReactNode;
-  isOpen?: boolean;
-  onOpenChange?: (isOpen: boolean) => void;
 }
 
-export function DateCard({ dateKey, taskNode }: DateCardProps) {
+export function DateCard({ dateKey }: DateCardProps) {
   const dayData = daysMetadata.find((d) => d.date === dateKey);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const itemRef = useRef<HTMLDivElement>(null);
@@ -57,11 +55,17 @@ export function DateCard({ dateKey, taskNode }: DateCardProps) {
   }, []);
 
   return (
-    <div ref={itemRef} className="scroll-my-12">
-      <AccordionItem value={date} className="border-0">
+    <div
+      ref={itemRef}
+      className="scroll-my-12 hover:shadow-xl transition-shadow"
+    >
+      <AccordionItem
+        value={date}
+        className="rounded-lg data-open:bg-white border-0 overflow-hidden"
+      >
         <AccordionTrigger
           ref={triggerRef}
-          className="p-4 relative overflow-hidden flex flex-1 justify-between items-center w-full hover:bg-gray-100 rounded-sm transition-colors text-lg font-bold [&[data-panel-open]]:bg-white [&[data-panel-open]]:shadow-xl [&[data-panel-open]]:rounded-lg"
+          className="p-4 relative overflow-hidden flex flex-1 justify-between items-center w-full hover:bg-white group-open:bg-white transition-colors text-lg font-bold [&[data-panel-open]]:rounded-lg "
         >
           {date && title && (
             <h3 className="text-xl font-semibold text-foreground relative z-10">
@@ -71,14 +75,18 @@ export function DateCard({ dateKey, taskNode }: DateCardProps) {
         </AccordionTrigger>
 
         {/* Accordion Content */}
-        <AccordionContent className="items-center px-4 pb-5 grid md:grid-cols-[auto_300px] gap-8 mt-2">
-          <div className="grid my-4 pt-2 text-lg text-foreground-muted leading-relaxed space-y-6">
+        <AccordionContent className="bg-white px-4 pb-5 grid md:grid-cols-[auto_300px] gap-8">
+          <div className="grid text-lg text-foreground-muted leading-relaxed space-y-6">
             {/* Tasks */}
-            {taskNode}
+            <TaskRenderer tasks={dayData?.tasks} />
 
             <div className="flex gap-1">
               {skillsUsed?.map((skill) => (
-                <Badge key={skill} variant="outline">
+                <Badge
+                  key={skill}
+                  variant="outline"
+                  className="text-xs font-semibold px-3 py-3"
+                >
                   {skill}
                 </Badge>
               ))}
@@ -88,7 +96,7 @@ export function DateCard({ dateKey, taskNode }: DateCardProps) {
           {/* Screenshot */}
           {screenshot && (
             <Dialog>
-              <DialogTrigger className="my-6 group relative block aspect-video w-full overflow-hidden rounded-lg border border-border/70 shadow-2xs transition-all cursor-zoom-in outline-none">
+              <DialogTrigger className="py-6 group relative block aspect-video w-full overflow-hidden rounded-lg border border-border/70 shadow-2xs transition-all cursor-zoom-in outline-none">
                 <Image
                   src={screenshot}
                   alt={`Date ${date} screenshot`}

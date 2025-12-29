@@ -17,10 +17,10 @@
       "url": "https://mcp.vercel.com",
       "type": "http"
     },
-    "chrome-devtools": {
+    "knip": {
       "command": "npx",
-      "args": ["chrome-devtools-mcp@latest"]
-    }
+      "args": ["-y", "@knip/mcp"],
+    }, 
   },
   "inputs": []
 }

@@ -1,17 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
 import {
   HoverCard,
   HoverCardContent,
   HoverCardPositioner,
   HoverCardTrigger,
 } from "@/components/ui/hover-card";
+import { CTA } from "./cta";
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-background via-background to-background px-4 py-20">
+    <section className="flex-col relative min-h-screen w-full flex items-center justify-center overflow-hidden bg-gradient-to-b from-white via-background/40 to-background/40 px-4">
       {/* Background decorative elements */}
       <div className="absolute inset-0 -z-10 overflow-hidden">
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-96 h-96 bg-accent/10 rounded-full blur-3xl opacity-40" />
@@ -20,8 +20,8 @@ export function Hero() {
 
       <div className="max-w-4xl mx-auto text-center space-y-8">
         {/* Main heading */}
-        <div className="space-y-8">
-          <h1 className="grid text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
+        <div className="flex flex-col justify-center items-center space-y-8">
+          <h1 className="justify-center items-center flex flex-col text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
             <span className="leading-20 text-8xl bg-gradient-to-r from-foreground via-primary to-foreground bg-clip-text text-transparent">
               How I built
             </span>
@@ -63,21 +63,8 @@ export function Hero() {
             .
           </p>
         </div>
-
-        {/* CTA */}
-        <div className="pt-8">
-          <Button
-            onClick={() => {
-              const element = document.getElementById("roadmap");
-              element?.scrollIntoView({ behavior: "smooth" });
-            }}
-            variant="default"
-            size="lg"
-            className="inline-flex items-center justify-center px-6 py-3 rounded-lg bg-primary text-primary-foreground font-semibold hover:bg-primary/90 transition-colors"
-          >
-            View the Journey
-          </Button>
-        </div>
+        {/* CTA Section */}
+        <CTA />
       </div>
     </section>
   );

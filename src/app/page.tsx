@@ -1,4 +1,5 @@
 import { DailyCards } from "@/components/daily-cards";
+import { DeployedSite } from "@/components/deployed-site";
 import { Hero } from "@/components/hero";
 import { Lessons } from "@/components/lessons";
 import { Roadmap } from "@/components/roadmap";
@@ -6,7 +7,7 @@ import { SourceCode } from "@/components/source-code";
 
 export default function DatesPage() {
   return (
-    <main className="w-full bg-background">
+    <main className="flex flex-col items-center relative w-full bg-background">
       {/* Hero Section */}
       <Hero />
 
@@ -17,10 +18,13 @@ export default function DatesPage() {
       <DailyCards />
 
       {/* Lessons Section */}
-      <Lessons />
+      {/* <Lessons /> */}
 
       {/* Source Code Section */}
       <SourceCode />
+
+      {/* Deployed Site Section */}
+      <DeployedSite />
 
       {/* Footer */}
       <footer className="w-full py-12 bg-muted">
