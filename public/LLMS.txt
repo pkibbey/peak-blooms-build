@@ -1,0 +1,332 @@
+# How I Built Peak Blooms
+
+A detailed journey documenting how I designed, developed, and deployed a modern web platform by Phineas Kibbey.
+
+## Table of Contents
+
+- [Overview](#overview)
+- [The Journey](#the-journey)
+- [Weekly Summaries](#weekly-summaries)
+- [Daily Commits](#daily-commits)
+- [Lessons Learned](#lessons-learned)
+
+## Overview
+
+This document captures the complete development journey of Peak Blooms, a modern e-commerce platform built with Next.js, TypeScript, and modern web technologies.
+
+**Technologies Used:**
+- Next.js with TypeScript
+- BiomeJS for linting and formatting
+- ShadCN/BaseUI for components
+- Prisma for database management
+- Better-Auth for authentication
+- Vitest for unit testing
+
+## The Journey
+
+The project was completed over 4 weeks, each with distinct focus areas and milestones.
+
+### Weekly Summaries
+
+#### Foundation & Design System
+**Week 1** | Nov 22 - 28
+
+Setting up the project infrastructure, design systems, and core components
+
+**Milestones:**
+- Project Setup
+- Design System
+- UI Components
+
+#### Core Feature & Data Layer
+**Week 2** | Nov 29 - Dec 5
+
+Building core features with validation, data architecture, and authentication
+
+**Milestones:**
+- Validation
+- Data Access Layer
+- Authentication
+
+#### Advanced Features & Optimization
+**Week 3** | Dec 6 - 12
+
+Implementing metrics, admin management, and performance improvements
+
+**Milestones:**
+- Metrics System
+- Admin Features
+- Optimization
+
+#### Performance & Testing
+**Week 4** | Dec 13 - 19
+
+Final refinements, build fixes, type unification, and deployment preparation
+
+**Milestones:**
+- Build Fixes
+- Type Unification
+- Documentation
+
+## Daily Commits
+
+A day-by-day breakdown of the development process with detailed tasks and lessons learned.
+
+### 2025-11-22 - Client Interview & Project Setup
+
+**Skills Used:** Site Architecture, Type Safety, Code Quality
+
+**Work Completed:**
+
+Gathered **client requirements** *(Understanding client needs upfront ensures the project aligns with business goals and reduces rework during development.)*. Wrote **functional requirements docs** *(Design systems maintain consistency. Clear documentation and design patterns ensure all team members build features cohesively.)* and a **style guide** *(A style guide establishes visual consistency and reusable patterns, providing a single source of truth for design decisions across the entire project.)*. Scaffolded a Next.js app with **TypeScript** *(Type safety is important for reliable software, and it also speeds up development by providing code completion in IDEs.)*, **BiomeJS** *(An unopinionated linter and formatter — works almost effortlessly.)*, and **ShadCN** *(Accessibility is key — using these Radix UI–based components helps us achieve that in a clean, composable fashion.)*.
+
+---
+
+### 2025-11-23 - Database Schema & Design System
+
+**Skills Used:** Database Design, UI Components
+
+**Work Completed:**
+
+Created foundational UI components, and a **schema-defined database** *(I opted for Prisma for a type-safe schema, generated TypeScript client, and serverless-friendly workflow.)*.
+
+---
+
+### 2025-11-24 - Authentication
+
+**Skills Used:** Authentication, React
+
+**Work Completed:**
+
+Implemented session-based authentication using **Auth.js** *(Used Auth.js to setup authentication. Including sign up, magic-link login, gated access, and user mananagment.)*, and added more UI components.
+
+---
+
+### 2025-11-25 - Shopping Cart
+
+**Skills Used:** Server-side Rendering, E-commerce
+
+**Work Completed:**
+
+Configured dynamic pages to use **ISR** *(ISR was chosen early for performance and flexibility. Incremental Static Regeneration balances the performance of static pages with the freshness of dynamic content, regenerating pages on-demand and serving cached versions to users.)*, created a **shopping cart** *(Cart functionality is essential for e-commerce. A smooth shopping cart experience reduces friction and increases conversion rates.)* workflow using SSR, and added content management for admin users.
+
+---
+
+### 2025-11-26 - Navigation & Layouts
+
+**Skills Used:** UI Design, Consistency
+
+**Work Completed:**
+
+Created a consistent navigation, standardized **table layouts** *(Table layouts reduce code duplication. Creating shared table layouts and styles eliminates repetitive code and makes maintenance easier.)*, and implemented cart checkout functionality.
+
+---
+
+### 2025-11-27 - Order History & Code Quality
+
+**Skills Used:** Code Quality, Refactoring
+
+**Work Completed:**
+
+Built the **order history pages** *(Account features improve user retention. Providing users with access to their order history and account settings increases engagement and reduces support burden.)*, and **refactored the largest** *(Component extraction reduces duplication. Breaking large components into smaller, focused pieces makes them reusable and easier to test and maintain.)* files into smaller components.
+
+---
+
+### 2025-11-28 - Image Upload & Product Features
+
+**Skills Used:** File Upload, Data Validation, UI Design
+
+**Work Completed:**
+
+Implemented **image uploads** *(Image validation prevents errors. Validating image dimensions, file sizes, and formats ensures data quality and prevents loading broken or oversized images.)*, added product filters, quantity selectors, and **consisitent page headers** *(Consistent headers improve navigation. Standardized page headers provide visual anchors and help users understand their current location in the application.)*.
+
+---
+
+### 2025-11-29 - Client Review & Form Validation
+
+**Skills Used:** Client Facing, Schema Validation, Data Architecture
+
+**Work Completed:**
+
+Reviewed site progress with the client, and implemented **Zod form validation** *(Early validation enhances user experience. Validating form input on the client side before submission reduces server load and provides immediate feedback to users.)*.
+
+---
+
+### 2025-11-30 - Performance Improvements
+
+**Skills Used:** Authentication, Database Design, Typography
+
+**Work Completed:**
+
+Added **database indexes** *(Database indexes significantly improve performance. Proper indexing on frequently queried columns dramatically speeds up database queries.)*, configured auth with **JWT authentication** *(JWT tokens reduce database load. Stateless JWT authentication eliminates expensive database lookups on every request and improves performance.)*, defined **typography utilities** *(Typography systems maintain consistency. Creating reusable typography utilities ensures uniform text styling across the application and reduces duplication.)*, and crafted **legal pages** *(Legal pages build trust. Providing privacy policies, terms of service, and company information establishes credibility with users.)*.
+
+---
+
+### 2025-12-01 - Auth Migration
+
+**Skills Used:** OAuth, Code Quality, Admin UI
+
+**Work Completed:**
+
+Migrated from next-auth to **better-auth** *(Authentication library evaluation improves fit. Evaluating alternatives ensures the chosen library aligns with project requirements and architecture.)*,  removed dead code using **Knip** *(Knip finds and eliminates unused code. Rather than manually hunting for dead code, this specialized tool automatically identifies unused exports and files, making it easy to keep the codebase clean and maintainable.)*, and consolidated **admin dashboard** *(Simplified admin dashboard layout. A clean, intuitive layout enhances user experience and makes navigation easier.)* layouts.
+
+---
+
+### 2025-12-02 - Pagination & Data Import
+
+**Skills Used:** Data Import, Pagination, UI Design
+
+**Work Completed:**
+
+Created a **database seed script** *(Seed scripts automate data setup. Using a CSV parser to seed the database with initial product data eliminates manual entry, provides a reproducible setup process, and ensures consistency across development environments.)*, added shop **pagination** *(Pagination improves performance and UX. Breaking large datasets into pages reduces initial load time and makes browsing more intuitive.)*, and improved page layouts.
+
+---
+
+### 2025-12-03 - Admin Enhancements
+
+**Skills Used:** Search Functionality, Database Design
+
+**Work Completed:**
+
+Added **product search** *(Search functionality enhances product discovery. A prominent search feature helps users find products faster, reducing friction in the shopping journey.)*, implemented **sortable tables** *(Sortable tables enable data exploration. Allowing users to sort by different columns makes it easier to find and analyze data.)*, and enabled collections and products to have **many-to-many relationships** *(Many-to-many relationships provide flexibility. Supporting multiple collections per product enables richer product categorization without data duplication.)*.
+
+---
+
+### 2025-12-04 - UI clean up
+
+**Skills Used:** Styling, Component Composition
+
+**Work Completed:**
+
+Added featured collections, **shipping banner** *(Shipping messaging builds customer confidence. Clear shipping information reassures customers and reduces purchase anxiety.)* and **product card** *(The product card became the most-reused component across browse, search, and collection pages, so investing focused time in building a solid, well-structured component paid dividends throughout the entire application.)* components.
+
+---
+
+### 2025-12-05 - Ordering System Tweaks
+
+**Skills Used:** UI Components, Database Design, Marketing
+
+**Work Completed:**
+
+Switched to a **local database instead of remote** *(Local databases accelerate development. Using a local database eliminates network latency and allows developers to work offline.)*, added product **quantity selectors** *(Quantity selectors improve shopping experience. Inline quantity selection streamlines the shopping process and reduces clicks.)*, and **reorder from history** *(Reorder from history increases convenience. Allowing repeat purchases from previous orders improves customer experience for frequent buyers.)* functionality.
+
+---
+
+### 2025-12-08 - Metrics & Admin Management
+
+**Skills Used:** Site Architecture, Performance Monitoring
+
+**Work Completed:**
+
+Implemented a **database metrics system** *(Metrics reveal performance bottlenecks. Tracking database queries helps identify slow operations and optimize hot paths.)*, replaced dynamic heros with **static components** *(Static components improve performance. Dynamic components added too much complexity, so using static components reduced complexity and improved performance.)*, and enabled admins to manage **collection products** *(Collection management increases flexibility. Giving admins fine-grained control over product collections enables better content curation.)*.
+
+---
+
+### 2025-12-09 - Production Optimization
+
+**Skills Used:** Database Design, Authentication, Server Actions
+
+**Work Completed:**
+
+Replaced magic link with **Google authentication** *(Google auth simplifies user experience. OAuth providers eliminate password management friction and leverage existing user accounts.)*, simplified **checkout** *(Simplified checkout experience. Streamlined the checkout process to focus on essential steps.)*, optimized seed scripts, and converted API endpoints into **server actions** *(Server actions simplify mutations and improve performance. Moving operations to the server eliminates API boilerplate, reduces client-side JavaScript, and provides direct database access without network overhead.)*.
+
+---
+
+### 2025-12-10 - Performance Improvements
+
+**Skills Used:** Performance Optimization, User Feedback
+
+**Work Completed:**
+
+Disabled link prefetching, added consisitent **toast notifications** *(Rich UI feedback improves experience. Colorful, well-designed notifications make feedback more noticeable and easier to understand.)*, removed complicated product variants , and replaced static types with **Prisma generated types** *(Schema-driven types prevent drift. Initially, static types seemed practical, but auto-generating types directly from the Prisma schema is more effective—it ensures types stay perfectly in sync and prevents the inevitable mismatches that occur with manually maintained types.)*.
+
+---
+
+### 2025-12-11 - Theme Implementation
+
+**Skills Used:** Styling, Complexity Analysis
+
+**Work Completed:**
+
+I toyed with adding in a **theme toggle** *(CSS variables enable flexible theming. CSS custom properties allow dynamic theme switching without duplicating styles. Context provides theme state management across the app.)*, which defaulted to the user's browser preferences, but after exploring this idea, I realized that it would not provide enough value, so opted to remove it.
+
+---
+
+### 2025-12-12 - Client review
+
+**Skills Used:** Site Architecture, Documentation
+
+**Work Completed:**
+
+Reviewed the app with the client, and we agreed on a new approach for shipping. The **shipping and delivery terminology** *(Consistent terminology prevents confusion. Using the same terms consistently across documentation, UI, and code reduces cognitive load and improves clarity.)* was then updated across the application.
+
+---
+
+### 2025-12-13 - Replace UI Framework
+
+**Skills Used:** Component Library, Type Safety
+
+**Work Completed:**
+
+Consolidated **Cart and Order concepts** *(Simpler systems are easier to maintain. Consolidating redundant concepts reduces mental overhead and makes features easier to understand.)*, and migrated UI from RadixUI to **BaseUI** *(UI framework migration improves design consistency. BaseUI provides better alignment with our design system and improved component APIs.)*.
+
+---
+
+### 2025-12-14 - Add Global Search
+
+**Skills Used:** Search Functionality, UI Components
+
+**Work Completed:**
+
+Added **site search** *(Site search improves product discovery. A prominent search feature helps users find products faster, reducing friction in the shopping journey.)* to navigation, and implemented **price visibility controls** *(Hidden prices incentivize user signup. Restricting price visibility encourages account creation and user engagement.)*.
+
+---
+
+### 2025-12-15 - Build Fixes & Type Consistency
+
+**Skills Used:** CI/CD, Type Safety, Documentation
+
+**Work Completed:**
+
+Fixed **production build issues** *(Build verification prevents deployment issues. Testing builds in production-like environments catches environment-specific issues before they affect users.)*, unified **session types** *(Type unification prevents errors. Consistent type definitions across the codebase prevent bugs and improve IDE autocomplete.)*, and updated **documentation** *(Clear documentation improves team productivity. Well-documented processes and guidelines help new team members onboard faster.)*.
+
+---
+
+### 2025-12-16 - Performance Gains using Server Actions
+
+**Skills Used:** Site Architecture, Server Actions
+
+**Work Completed:**
+
+Migrated to **server actions** *(Server actions reduce latency and improve performance. Running critical operations on the server eliminates round-trip network calls.)* for all operations, added **soft-delete** *(Soft-delete preserves data integrity. Marking records as deleted rather than removing them preserves historical data and enables undo functionality.)*, and **order snapshots** *(Order snapshots maintain price history accuracy. Storing product prices at order time prevents price changes from affecting historical records.)*.
+
+---
+
+### 2025-12-17 - Setup Test Framework
+
+**Skills Used:** Server Actions, Testing Framework
+
+**Work Completed:**
+
+Completed server action migrations, and added **vitest framework** *(Testing frameworks automate quality assurance. Integrated testing frameworks enable developers to catch regressions automatically.)* for unit testing.
+
+---
+
+### 2025-12-18 - Achieved 80% Test Coverage
+
+**Skills Used:** Code Coverage, Database Design, Documentation
+
+**Work Completed:**
+
+Added **unit tests to achieve 80% coverage** *(Comprehensive tests ensure reliability. High test coverage reduces the surface area for bugs and increases confidence in refactoring.)*, simplified **order number logic** *(Optional fields provide flexibility. Simplifying order numbering makes the system more maintainable and easier to reason about.)* and cleaned up documentation.
+
+---
+
+## Lessons Learned
+
+### Database Fidelity
+Use local database for development and maintain a script that can seed the data to go along with the commits, so that the schema can always be recreated to match the git history.
+
+### The 'Good Enough' Trap
+Don't let 'perfect' be the enemy of 'shipped', but don't let 'shipped' be an excuse for messy code. If a component feels like it needs a rewrite, it probably does.
+

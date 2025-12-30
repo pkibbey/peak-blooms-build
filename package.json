@@ -1,6 +1,7 @@
 {
   "name": "peak-blooms-blog",
   "version": "0.1.0",
+  "description": "A production-grade interactive documentation platform with ISR, and component-driven architecture. Built with Next.js 16, React 19, TypeScript, and data pipeline automation.",
   "private": true,
   "type": "module",
   "repository": {
@@ -15,6 +16,8 @@
     "format": "biome format --write",
     "fetch-commits": "node fetch-commits.js",
     "split-commits": "node split-commits-by-date.js",
+    "generate-llms": "node generate-llms-txt.js",
+    "generate-markdown": "node generate-markdown.js",
     "knip": "knip"
   },
   "dependencies": {
