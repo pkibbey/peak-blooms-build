@@ -6,6 +6,11 @@ interface DayMetadata {
   screenshot: string;
   skillsUsed: string[];
   tasks?: Task[];
+  theme?:
+    | "foundation"
+    | "core-features"
+    | "data-architecture"
+    | "performance-quality";
 }
 
 interface WeekMetadata {
@@ -62,6 +67,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Client Interview & Project Setup",
     screenshot: "/screenshots/2025-11-22.png",
     skillsUsed: ["Site Architecture", "Type Safety", "Code Quality"],
+    theme: "foundation",
     tasks: [
       {
         type: "paragraph",
@@ -118,6 +124,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Database Schema & Design System",
     screenshot: "/screenshots/2025-11-23.png",
     skillsUsed: ["Database Design", "UI Components"],
+    theme: "foundation",
     tasks: [
       {
         type: "paragraph",
@@ -142,6 +149,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Authentication",
     screenshot: "/screenshots/2025-11-24.png",
     skillsUsed: ["Authentication", "React"],
+    theme: "foundation",
     tasks: [
       {
         type: "paragraph",
@@ -169,6 +177,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Shopping Cart",
     screenshot: "/screenshots/2025-11-25.png",
     skillsUsed: ["Server-side Rendering", "E-commerce"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -177,7 +186,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "ISR",
-            body: "ISR was chosen early for performance and flexibility. Incremental Static Regeneration balances the performance of static pages with the freshness of dynamic content, regenerating pages on-demand and serving cached versions to users.",
+            body: "ISR was chosen early for the product catalog's unique needs. Fully static pages couldn't handle product updates, while fully dynamic rendering would bottleneck on database queries. ISR provided the sweet spot: pages are pre-rendered and cached for performance, but regenerated on-demand when products change, giving us fresh content without sacrificing speed.",
             icon: "Flame",
           },
           { kind: "text", text: ", created a " },
@@ -201,6 +210,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Navigation & Layouts",
     screenshot: "/screenshots/2025-11-26.png",
     skillsUsed: ["UI Design", "Consistency"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -229,6 +239,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Order History & Code Quality",
     screenshot: "/screenshots/2025-11-27.png",
     skillsUsed: ["Code Quality", "Refactoring"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -259,6 +270,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Image Upload & Product Features",
     screenshot: "/screenshots/2025-11-28.png",
     skillsUsed: ["File Upload", "Data Validation", "UI Design"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -295,6 +307,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Client Review & Form Validation",
     screenshot: "/screenshots/2025-11-29.png",
     skillsUsed: ["Client Facing", "Schema Validation", "Data Architecture"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -306,7 +319,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "Zod form validation",
-            body: "Early validation enhances user experience. Validating form input on the client side before submission reduces server load and provides immediate feedback to users.",
+            body: "I prioritized Zod form validation early because catching errors at the edge of the system—right in the browser—prevents bad data from ever reaching the backend. This not only improves user experience with instant feedback, but also shapes the entire data flow: the backend can assume data is well-formed, reducing defensive code and making the API surface cleaner. It also let me iterate on form UX quickly, since validation logic was colocated with the UI.",
             icon: "Bulb",
             side: "right",
           },
@@ -320,6 +333,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Performance Improvements",
     screenshot: "/screenshots/2025-11-30.png",
     skillsUsed: ["Authentication", "Database Design", "Typography"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -328,7 +342,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "database indexes",
-            body: "Database indexes significantly improve performance. Proper indexing on frequently queried columns dramatically speeds up database queries.",
+            body: "Adding database indexes was a turning point for performance. Early on, some queries were slow enough to be noticeable in the UI. By profiling and adding the right indexes, I was able to cut query times from seconds to milliseconds, which made the app feel instantly responsive. This reinforced the value of measuring before optimizing and treating the database as a first-class part of the user experience.",
             icon: "Flame",
             side: "right",
           },
@@ -339,7 +353,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "JWT authentication",
-            body: "JWT tokens reduce database load. Stateless JWT authentication eliminates expensive database lookups on every request and improves performance.",
+            body: "Switching to JWT authentication was about scalability and simplicity. Stateless tokens meant I could eliminate session lookups on every request, which not only improved performance but also made the system easier to reason about. It was a conscious tradeoff: a bit more up-front complexity for a much simpler and more scalable authentication flow in the long run.",
             icon: "Flame",
             side: "right",
           },
@@ -347,7 +361,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "typography utilities",
-            body: "Typography systems maintain consistency. Creating reusable typography utilities ensures uniform text styling across the application and reduces duplication.",
+            body: "Investing in typography utilities early paid off throughout the project. By abstracting font sizes, weights, and spacing into a utility system, I avoided a lot of one-off CSS and design drift. This made it easy to update the look and feel globally, and ensured that the visual hierarchy stayed consistent as the app grew.",
             icon: "Bulb",
             side: "right",
           },
@@ -369,6 +383,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Auth Migration",
     screenshot: "/screenshots/2025-12-01.png",
     skillsUsed: ["OAuth", "Code Quality", "Admin UI"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -377,7 +392,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "better-auth",
-            body: "Authentication library evaluation improves fit. Evaluating alternatives ensures the chosen library aligns with project requirements and architecture.",
+            body: "Next-auth felt overengineered for our needs—too many abstraction layers and unclear future direction. Better-auth offered a cleaner, more TypeScript-first approach with better plugin architecture. The migration simplified the auth layer significantly and aligned better with Next.js server actions.",
             icon: "AlertCircle",
             side: "right",
           },
@@ -407,6 +422,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Pagination & Data Import",
     screenshot: "/screenshots/2025-12-02.png",
     skillsUsed: ["Data Import", "Pagination", "UI Design"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -440,6 +456,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Admin Enhancements",
     screenshot: "/screenshots/2025-12-03.png",
     skillsUsed: ["Search Functionality", "Database Design"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -448,7 +465,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "product search",
-            body: "Search functionality enhances product discovery. A prominent search feature helps users find products faster, reducing friction in the shopping journey.",
+            body: "Adding product search was a direct response to user feedback—people struggled to find specific items as the catalog grew. Rather than just a filter, I wanted a true search experience that felt instant and forgiving. This required rethinking data access patterns and optimizing queries for partial matches, which paid off in user satisfaction and engagement.",
             icon: "Bulb",
             side: "right",
           },
@@ -456,7 +473,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "sortable tables",
-            body: "Sortable tables enable data exploration. Allowing users to sort by different columns makes it easier to find and analyze data.",
+            body: "Sortable tables were about empowering admins. As the data set grew, static tables became a bottleneck for management. By making tables sortable, I gave admins the tools to quickly find, compare, and act on data—turning a static list into a dynamic workspace. This also set the stage for future enhancements like filtering and bulk actions.",
             icon: "Bulb",
             side: "right",
           },
@@ -467,7 +484,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "many-to-many relationships",
-            body: "Many-to-many relationships provide flexibility. Supporting multiple collections per product enables richer product categorization without data duplication.",
+            body: "Supporting many-to-many relationships was a foundational architectural decision. Early on, I realized that products and collections would need to evolve independently, and hard-coding relationships would create technical debt. By modeling this properly in the database, I enabled flexible categorization and future-proofed the data model for new features like cross-collection promotions.",
             icon: "Stack",
             side: "right",
           },
@@ -481,6 +498,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "UI clean up",
     screenshot: "/screenshots/2025-12-04.png",
     skillsUsed: ["Styling", "Component Composition"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -511,6 +529,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Ordering System Tweaks",
     screenshot: "/screenshots/2025-12-05.png",
     skillsUsed: ["UI Components", "Database Design", "Marketing"],
+    theme: "core-features",
     tasks: [
       {
         type: "paragraph",
@@ -519,7 +538,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "local database instead of remote",
-            body: "Local databases accelerate development. Using a local database eliminates network latency and allows developers to work offline.",
+            body: "Local database eliminated the feedback loop friction that remote databases create. No network latency meant faster iteration, instant test resets, and no waiting on remote infrastructure. This decision had outsized impact on development velocity—I could test database changes instantly and reset the database state without any overhead.",
             icon: "Flame",
             side: "right",
           },
@@ -549,6 +568,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Metrics & Admin Management",
     screenshot: "/screenshots/2025-12-08.png",
     skillsUsed: ["Site Architecture", "Performance Monitoring"],
+    theme: "data-architecture",
     tasks: [
       {
         type: "paragraph",
@@ -557,7 +577,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "database metrics system",
-            body: "Metrics reveal performance bottlenecks. Tracking database queries helps identify slow operations and optimize hot paths.",
+            body: "Implementing a database metrics system was a proactive move. Rather than waiting for users to report slowness, I wanted real data on where bottlenecks were forming. This let me optimize the most expensive queries first and gave me confidence that performance would scale as the app grew. It also provided a feedback loop for future architectural decisions.",
             icon: "Flame",
             side: "right",
           },
@@ -565,7 +585,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "static components",
-            body: "Static components improve performance. Dynamic components added too much complexity, so using static components reduced complexity and improved performance.",
+            body: "Switching from dynamic to static components was a lesson in simplicity. The original dynamic hero components were flexible but introduced unnecessary complexity and performance costs. By making them static, I reduced rendering overhead and made the codebase easier to maintain, with no loss in user experience.",
             icon: "Bulb",
             side: "right",
           },
@@ -573,7 +593,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "collection products",
-            body: "Collection management increases flexibility. Giving admins fine-grained control over product collections enables better content curation.",
+            body: "Enabling admins to manage collection products was about putting power in the hands of the people closest to the business. Rather than hard-coding relationships or requiring developer intervention, I built tools that let admins curate collections directly. This not only sped up content updates but also made the platform more adaptable to changing business needs.",
             icon: "Stack",
             side: "right",
           },
@@ -587,6 +607,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Production Optimization",
     screenshot: "/screenshots/2025-12-09.png",
     skillsUsed: ["Database Design", "Authentication", "Server Actions"],
+    theme: "data-architecture",
     tasks: [
       {
         type: "paragraph",
@@ -628,6 +649,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Performance Improvements",
     screenshot: "/screenshots/2025-12-10.png",
     skillsUsed: ["Performance Optimization", "User Feedback"],
+    theme: "data-architecture",
     tasks: [
       {
         type: "paragraph",
@@ -663,6 +685,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Theme Implementation",
     screenshot: "/screenshots/2025-12-11.png",
     skillsUsed: ["Styling", "Complexity Analysis"],
+    theme: "data-architecture",
     tasks: [
       {
         type: "paragraph",
@@ -671,7 +694,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "theme toggle",
-            body: "CSS variables enable flexible theming. CSS custom properties allow dynamic theme switching without duplicating styles. Context provides theme state management across the app.",
+            body: "Theme toggle seemed like a good idea—supporting dark mode and user preference was technically straightforward. But after prototyping, I realized the actual value was near zero. The e-commerce brand relied on specific color psychology and visual hierarchy that dark mode disrupted. Adding the feature would have increased complexity (CSS, context, persistence) for marginal benefit. Sometimes the best architecture decision is knowing what not to build.",
             icon: "Bulb",
             side: "right",
           },
@@ -688,6 +711,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Client review",
     screenshot: "/screenshots/2025-12-12.png",
     skillsUsed: ["Site Architecture", "Documentation"],
+    theme: "data-architecture",
     tasks: [
       {
         type: "paragraph",
@@ -713,6 +737,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Replace UI Framework",
     screenshot: "/screenshots/2025-12-13.png",
     skillsUsed: ["Component Library", "Type Safety"],
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",
@@ -729,7 +754,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "BaseUI",
-            body: "UI framework migration improves design consistency. BaseUI provides better alignment with our design system and improved component APIs.",
+            body: "Radix UI's headless approach required too much custom styling to match our design system. BaseUI offered better default theming, more design-system-friendly APIs, and less boilerplate. The migration consolidated scattered styling logic and made components feel more cohesive with fewer one-off customizations.",
             icon: "Stack",
             side: "right",
           },
@@ -743,6 +768,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Add Global Search",
     screenshot: "/screenshots/2025-12-14.png",
     skillsUsed: ["Search Functionality", "UI Components"],
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",
@@ -773,6 +799,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Build Fixes & Type Consistency",
     screenshot: "/screenshots/2025-12-15.png",
     skillsUsed: ["CI/CD", "Type Safety", "Documentation"],
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",
@@ -781,7 +808,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "production build issues",
-            body: "Build verification prevents deployment issues. Testing builds in production-like environments catches environment-specific issues before they affect users.",
+            body: "Fixing production build issues was a reality check—what works in development doesn't always work in production. By setting up CI/CD pipelines and testing in production-like environments, I caught subtle bugs and configuration mismatches early. This investment in build reliability paid off by making deployments stress-free.",
             icon: "AlertCircle",
             side: "right",
           },
@@ -789,7 +816,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "session types",
-            body: "Type unification prevents errors. Consistent type definitions across the codebase prevent bugs and improve IDE autocomplete.",
+            body: "Unifying session types was about reducing cognitive load. Early on, different parts of the app used slightly different type definitions, which led to subtle bugs and confusion. By standardizing on a single source of truth for session types, I made the codebase easier to navigate and reduced the risk of type mismatches.",
             icon: "Bulb",
             side: "right",
           },
@@ -797,7 +824,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "documentation",
-            body: "Clear documentation improves team productivity. Well-documented processes and guidelines help new team members onboard faster.",
+            body: "Updating documentation wasn't just about onboarding—it was about capturing the architectural decisions and tradeoffs made along the way. Good docs serve as a living record of why things are the way they are, making future changes safer and helping new contributors ramp up quickly.",
             icon: "InfoCircle",
             side: "right",
           },
@@ -811,6 +838,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Performance Gains using Server Actions",
     screenshot: "/screenshots/2025-12-16.png",
     skillsUsed: ["Site Architecture", "Server Actions"],
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",
@@ -819,7 +847,7 @@ export const daysMetadata: DayMetadata[] = [
           {
             kind: "hover",
             trigger: "server actions",
-            body: "Server actions reduce latency and improve performance. Running critical operations on the server eliminates round-trip network calls.",
+            body: "Server actions represented a fundamental architectural shift away from traditional REST APIs. Instead of separate endpoints, mutations lived alongside queries in the same file. This co-location enabled type safety across the server-client boundary, eliminated API boilerplate, and reduced client-side JavaScript. It aligned perfectly with Next.js 13+ and made form submission far simpler.",
             icon: "Flame",
             side: "right",
           },
@@ -849,6 +877,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Setup Test Framework",
     screenshot: "/screenshots/2025-12-17.png",
     skillsUsed: ["Server Actions", "Testing Framework"],
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",
@@ -874,6 +903,7 @@ export const daysMetadata: DayMetadata[] = [
     title: "Achieved 80% Test Coverage",
     screenshot: "/screenshots/2025-12-18.png",
     skillsUsed: ["Code Coverage", "Database Design", "Documentation"],
+    theme: "performance-quality",
     tasks: [
       {
         type: "paragraph",

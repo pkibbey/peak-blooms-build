@@ -1,9 +1,8 @@
-import { DailyCards } from "@/components/daily-cards";
 import { DeployedSite } from "@/components/deployed-site";
+import { ExecutiveSummary } from "@/components/executive-summary";
 import { Hero } from "@/components/hero";
-import { Lessons } from "@/components/lessons";
-import { Roadmap } from "@/components/roadmap";
 import { SourceCode } from "@/components/source-code";
+import { StrategicThemes } from "@/components/strategic-themes";
 
 export default function DatesPage() {
   return (
@@ -11,11 +10,11 @@ export default function DatesPage() {
       {/* Hero Section */}
       <Hero />
 
-      {/* Roadmap Section */}
-      <Roadmap />
+      {/* Executive Summary Section */}
+      <ExecutiveSummary />
 
-      {/* Daily Cards Section */}
-      <DailyCards />
+      {/* Strategic Themes Section */}
+      <StrategicThemes />
 
       {/* Lessons Section */}
       {/* <Lessons /> */}

@@ -68,7 +68,7 @@ function ImageBehindButton({
         </div>
       </div>
 
-      <div className="relative">
+      <button type="button" className="relative" onClick={onClick}>
         <Image
           width={2248}
           height={1298}
@@ -86,7 +86,7 @@ function ImageBehindButton({
             overlayClassName,
           )}
         />
-      </div>
+      </button>
     </div>
   );
 }
