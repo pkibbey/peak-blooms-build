@@ -1,7 +1,7 @@
 {
   "name": "peak-blooms-blog",
   "version": "0.1.0",
-  "description": "A production-grade interactive documentation platform with ISR, and component-driven architecture. Built with Next.js 16, React 19, TypeScript, and data pipeline automation.",
+  "description": "Full-Stack Architect Sprint: Evaluating React 19 and AI-integrated workflows for high-velocity system delivery.",
   "private": true,
   "type": "module",
   "repository": {

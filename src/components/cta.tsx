@@ -9,7 +9,7 @@ export function CTA() {
       imageAlt="Peak Blooms live site preview"
       buttonLabel="View the Journey"
       onClick={() => {
-        const element = document.getElementById("roadmap");
+        const element = document.getElementById("executive-summary");
         element?.scrollIntoView({ behavior: "smooth" });
       }}
     />

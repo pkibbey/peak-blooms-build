@@ -7,7 +7,6 @@ export interface ArchitecturalDecision {
 export interface NonFeature {
   title: string;
   rationale: string;
-  dayDecided?: string;
 }
 
 export interface ExecutiveSummaryData {
@@ -95,31 +94,26 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       title: "Theme Toggle / Dark Mode",
       rationale:
         "Evaluated but deprioritized due to limited user value. Single light theme provides better visual consistency and reduces maintenance burden. Can be added later with CSS variables if demand emerges.",
-      dayDecided: "November 27",
     },
     {
       title: "Complex Product Variants System",
       rationale:
         "Initially scoped for multiple SKUs per product (size, color, etc.), but simplified to core product attributes. Users can define products with basic properties, reducing schema complexity and admin overhead while meeting MVP requirements.",
-      dayDecided: "December 2",
     },
     {
       title: "Payment Gateway Integration",
       rationale:
         "Designed architecture to support future payment providers, but implemented single Stripe integration for launch. Sufficient for MVP; payment method expansion can be added without rearchitecting.",
-      dayDecided: "December 8",
     },
     {
       title: "Real-time Inventory Syncing",
       rationale:
         "Determined that webhook-based inventory updates (for external sources) weren't required for initial launch. Manual inventory management and batch updates sufficient for current scale.",
-      dayDecided: "December 10",
     },
     {
       title: "Multi-tenant Admin Capabilities",
       rationale:
         "Single-tenant admin panel sufficient for initial deployment. Multi-tenant support deferred to future iteration if needed for scaling to multiple store operators.",
-      dayDecided: "December 12",
     },
   ],
   keyMetrics: [
@@ -129,6 +123,5 @@ export const executiveSummaryData: ExecutiveSummaryData = {
     { label: "Pages / Routes", value: "15+" },
     { label: "Database Tables", value: "9" },
     { label: "Type-Safe APIs", value: "100%" },
-    { label: "Build Time", value: "< 5 seconds" },
   ],
 };

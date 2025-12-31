@@ -1,6 +1,6 @@
 # Peak Blooms
 
-> A comprehensive documentation of building a modern web platform in less than a month. From design and development to deployment.
+> Full-Stack Architect Sprint: Evaluating React 19 and AI-integrated workflows for high-velocity system delivery.
 
 ![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![Next.js](https://img.shields.io/badge/Next.js-16.0-black.svg)

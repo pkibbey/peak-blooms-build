@@ -1,17 +1,8 @@
 "use client";
 
-import { differenceInDays } from "date-fns";
-import Image from "next/image";
 import TaskRenderer from "@/components/dates/task-renderer";
 import { daysMetadata } from "@/components/dates-metadata";
 import { Card } from "@/components/ui/card";
-import {
-  Dialog,
-  DialogClose,
-  DialogContent,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { Badge } from "./ui/badge";
 
 export interface DateCardDenseProps {
   dateKey: string;

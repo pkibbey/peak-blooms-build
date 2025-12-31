@@ -26,6 +26,13 @@ const lessons: Lesson[] = [
     icon: <Code size={20} />,
     tag: "Productivity",
   },
+  {
+    title: "Strategic Sabbatical",
+    description:
+      "After 15 years in enterprise architecture, a sabbatical to explore Generative AI informed this project. Peak Blooms is the first production result of that research.",
+    icon: <Users size={20} />,
+    tag: "Context",
+  },
 ];
 
 export function Lessons() {
@@ -50,7 +57,7 @@ export function Lessons() {
         </div>
 
         {/* Lessons Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {lessons.map((lesson, idx) => (
             <Card
               key={idx}

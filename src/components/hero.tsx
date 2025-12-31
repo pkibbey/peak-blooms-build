@@ -62,6 +62,24 @@ export function Hero() {
             </HoverCard>
             .
           </p>
+
+          <div className="mt-2">
+            <p
+              id="architect-note"
+              className="text-sm text-muted-foreground max-w-2xl mx-auto"
+            >
+              <strong className="font-medium">Architect’s Note:</strong> A
+              30‑day architectural sprint applying React 19 Server Components,
+              SSR/ISR, CI practices, and AI‑assisted workflows to validate
+              high‑velocity, production‑grade delivery.
+              <a
+                href="/dev-notes"
+                className="ml-2 underline text-primary hover:text-primary/80"
+              >
+                Learn more
+              </a>
+            </p>
+          </div>
         </div>
         {/* CTA Section */}
         <CTA />

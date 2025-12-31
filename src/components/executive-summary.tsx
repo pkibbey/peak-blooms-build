@@ -1,8 +1,7 @@
 "use client";
 
-import { AlertCircle, CheckCircle2, Lightbulb } from "lucide-react";
+import { AlertCircle, Lightbulb } from "lucide-react";
 import Image from "next/image";
-import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { executiveSummaryData } from "./executive-summary-data";
 
@@ -34,13 +33,10 @@ export function ExecutiveSummary() {
                 <Image
                   width={2084}
                   height={1250}
-                  src="/peak-blooms-2.png"
+                  src="/peak-blooms.png"
                   alt="GitHub profile preview"
                   className="w-60 rounded-lg shadow-lg mb-2"
                 />
-                <p className="font-medium text-foreground">
-                  Sceenshot of home page
-                </p>
               </div>
               <div className="space-y-3">
                 <div>
@@ -121,7 +117,7 @@ export function ExecutiveSummary() {
           <div className="flex items-center gap-3">
             <AlertCircle className="w-6 h-6 text-amber-500" />
             <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Strategic Choices Decided Against
+              Architectural Decisions Decided Against
             </h3>
           </div>
 
@@ -138,19 +134,12 @@ export function ExecutiveSummary() {
                 className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow"
               >
                 <div className="space-y-3">
-                  <div className="flex items-start justify-between gap-3">
+                  <div className="flex items-start gap-3">
                     <h4 className="font-semibold text-foreground">
                       {nonFeature.title}
                     </h4>
-                    {nonFeature.dayDecided && (
-                      <Badge
-                        variant="outline"
-                        className="text-xs flex-shrink-0"
-                      >
-                        {nonFeature.dayDecided}
-                      </Badge>
-                    )}
                   </div>
+                  "
                   <p className="text-sm text-muted-foreground">
                     {nonFeature.rationale}
                   </p>
