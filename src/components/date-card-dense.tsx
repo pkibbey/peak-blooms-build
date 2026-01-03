@@ -1,18 +1,16 @@
 "use client";
 
 import TaskRenderer from "@/components/dates/task-renderer";
-import { daysMetadata } from "@/components/dates-metadata";
+import type { DayMetadata } from "@/components/dates-metadata";
 import { Card } from "@/components/ui/card";
 
 interface DateCardDenseProps {
-  dateKey: string;
+  day: DayMetadata;
 }
 
-export function DateCardDense({ dateKey }: DateCardDenseProps) {
-  const dayData = daysMetadata.find((d) => d.date === dateKey);
-  if (!dayData) return null;
-
-  const title = dayData.title;
+export function DateCardDense({ day }: DateCardDenseProps) {
+  console.log("day: ", day);
+  const title = day.title;
 
   return (
     <Card size="sm" className="p-4 border-border/30" aria-label={title}>
@@ -23,7 +21,7 @@ export function DateCardDense({ dateKey }: DateCardDenseProps) {
           )}
 
           <div className="text-sm text-muted-foreground mt-2 leading-snug">
-            <TaskRenderer tasks={dayData.tasks} />
+            <TaskRenderer tasks={day.tasks} />
           </div>
         </div>
       </div>

@@ -52,7 +52,6 @@ async function generateMarkdown() {
     markdown += `- [Overview](#overview)\n`;
     markdown += `- [Architect's Note](#architects-note)\n`;
     markdown += `- [Dev Notes](#dev-notes)\n`;
-    markdown += `- [System Health](#system-health)\n`;
     markdown += `- [Design System](#design-system)\n`;
     markdown += `- [The Journey](#the-journey)\n`;
     markdown += `- [Weekly Summaries](#weekly-summaries)\n`;
@@ -121,10 +120,6 @@ async function generateMarkdown() {
     // Dev Notes
     markdown += `## Dev Notes\n\n`;
     markdown += `This section summarizes how AI tools were used to accelerate work: boilerplate and component scaffolding, unit test generation, refactors, parsing CSV product data into mock datasets for the catalog, and generating asset prototypes for layouts and testing.\n\n`;
-
-    // System Health
-    markdown += `## System Health\n\n`;
-    markdown += `High-level notes about SSR/ISR choices, Server Actions usage, and performance considerations. Placeholders for Lighthouse snapshots or CI reports can be embedded here in the future.\n\n`;
 
     // Design System
     markdown += `## Design System\n\n`;

@@ -17,10 +17,15 @@
     "fetch-commits": "node fetch-commits.js",
     "split-commits": "node split-commits-by-date.js",
     "generate-markdown": "node generate-markdown.js",
+    "generate:ai-days": "node scripts/generate-day-metadata.mjs",
+    "generate:ai-days:all": "node scripts/generate-day-metadata-all.mjs",
+    "migrate:add-day-ids": "node scripts/migrate-add-day-ids.js --dry-run",
     "knip": "knip"
   },
   "dependencies": {
+    "@ai-sdk/openai-compatible": "^2.0.2",
     "@base-ui/react": "^1.0.0",
+    "ai": "^6.0.5",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "dotenv": "^17.2.3",
@@ -42,6 +47,7 @@
     "babel-plugin-react-compiler": "1.0.0",
     "knip": "^5.79.0",
     "tailwindcss": "^4.1.18",
-    "typescript": "^5.9.3"
+    "typescript": "^5.9.3",
+    "uuid": "^13.0.0"
   }
 }

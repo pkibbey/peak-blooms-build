@@ -1,3 +1,5 @@
+import type { ReactNode } from "react";
+
 type InlineText = { kind: "text"; text: string };
 type InlineHover = {
   kind: "hover";
@@ -16,7 +18,4 @@ type InlineLink = {
 type InlineFormat = { kind: "em" | "strong"; segments: InlineSegment[] };
 type InlineSegment = InlineText | InlineHover | InlineLink | InlineFormat;
 
-export type Task =
-  | { type: "paragraph"; text: string }
-  | { type: "list"; ordered?: boolean; items: Task[] }
-  | { type: "raw"; jsx: string };
+export type Task = { text: ReactNode };

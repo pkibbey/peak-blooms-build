@@ -115,7 +115,7 @@ export function ExecutiveSummary() {
             </h3>
           </div>
 
-          <p className="text-muted-foreground max-w-3xl">
+          <p className="text-muted-foreground">
             The following features were evaluated but deprioritized based on ROI
             analysis and MVP scope:
           </p>

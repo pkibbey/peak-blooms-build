@@ -5,7 +5,6 @@ import { Badge } from "@/components/ui/badge";
 import { DateCardDense } from "./date-card-dense";
 import { daysMetadata, themeConfigs } from "./dates-metadata";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-
 export function StrategicThemes() {
   return (
     <section id="strategic-themes" className="w-full py-20 bg-white/80">
@@ -63,7 +62,7 @@ export function StrategicThemes() {
                     <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
                       {themeConfig.title}
                     </h3>
-                    <p className="text-muted-foreground max-w-3xl">
+                    <p className="text-muted-foreground">
                       {themeConfig.description}
                     </p>
                     <div className="text-sm text-muted-foreground font-medium pt-2 flex items-center gap-2">
@@ -77,8 +76,8 @@ export function StrategicThemes() {
 
                   {/* Dense day cards grid */}
                   <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-                    {themeDays.map((day) => (
-                      <DateCardDense key={day.date} dateKey={day.date} />
+                    {themeDays.map((day, i) => (
+                      <DateCardDense key={day.id} day={day} />
                     ))}
                   </div>
                 </div>

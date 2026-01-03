@@ -32,14 +32,10 @@ export default function DatesPage() {
         <div className="grid gap-3 max-w-4xl mx-auto px-4 text-center">
           <p className="text-sm text-muted-foreground">
             A comprehensive journey of building and launching a modern web
-            platform —{" "}
+            platform.{" "}
             <Link href="/dev-notes" className="underline text-primary">
               Dev Notes
             </Link>{" "}
-            •{" "}
-            <Link href="/system-health" className="underline text-primary">
-              System Health
-            </Link>
           </p>
           <small className="text-sm text-muted-foreground">
             Phineas Kibbey &copy; 2025

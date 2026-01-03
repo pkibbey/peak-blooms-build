@@ -73,9 +73,9 @@ export const executiveSummaryData: ExecutiveSummaryData = {
         "Deferred webhook-based real-time inventory syncing because manual and batch updates satisfy current operational needs. Avoiding streaming infrastructure reduces launch complexity and can be revisited as scale demands it.",
     },
     {
-      title: "Company Management",
+      title: "Multi-user Sign-in",
       details:
-        "To reduce launch complexity, each company's orders are managed by a single user account. Company-level, multi-user sign-in and role-based access will be introduced later if customer demand requires shared or delegated access.",
+        "Company-level, multi-user sign-in will be introduced later if customer demand requires shared or delegated access. Single-acccount role-based access is sufficient for MVP.",
     },
   ],
   architecturalDecisions: [
@@ -110,15 +110,15 @@ export const executiveSummaryData: ExecutiveSummaryData = {
         "Jest provides readable test patterns and Vitest's fast mocks speed test runs, enabling rapid iteration and high coverage.",
     },
     {
-      title: "Automatic Clean Code",
+      title: "Automatic Clean Up",
       description:
-        "Enforced consistent code style and removed dead code using Biome (linting/formatting) and Knip (unused-export detection), reducing diffs, editor friction, and long-term maintenance overhead.",
+        "Thanks to Biome and Knip, linting, code formatting, and dead code removal are handled automatically. This lightens the load on the developer and the codebase stays clean and consistent.",
     },
   ],
   keyMetrics: [
-    { label: "Development Time", value: "27 days" },
-    { label: "Test Coverage", value: "80%" },
-    { label: "Pages / Routes", value: "15+" },
+    { label: "Pages / Routes", value: "50+" },
     { label: "Type-Safe APIs", value: "100%" },
+    { label: "Test Coverage", value: "90%" },
+    { label: "Development Time", value: "27 days" },
   ],
 };
