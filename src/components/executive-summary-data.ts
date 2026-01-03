@@ -55,27 +55,27 @@ export const executiveSummaryData: ExecutiveSummaryData = {
     {
       title: "Theme Toggle",
       details:
-        "Deferred in favor of a single light theme to provide visual consistency and reduce maintenance and testing burden. Dark mode can be added later via CSS variables if user demand increases.",
+        "A single light theme was prioritized to ensure visual consistency and reduce the maintenance and testing burden for the MVP.",
     },
     {
       title: "Product Variants",
       details:
-        "Simplified to core product attributes rather than full multi-SKU variants to reduce schema complexity and admin overhead. This meets MVP needs while keeping the system easier to manage and iterate on.",
+        "The data model was simplified to core attributes instead of full multi-SKU variants to reduce schema complexity and admin overhead.",
     },
     {
       title: "Payment Processing",
       details:
-        "Postponed full payment gateway integration to avoid adding complexity to the checkout workflow. Market-priced products will use an admin approval and pricing workflow until a more robust payments flow is required.",
+        "Full payment gateway integration was postponed to avoid introducing significant complexity into the initial checkout workflow.",
     },
     {
       title: "Inventory Syncing",
       details:
-        "Deferred webhook-based real-time inventory syncing because manual and batch updates satisfy current operational needs. Avoiding streaming infrastructure reduces launch complexity and can be revisited as scale demands it.",
+        "Real-time, webhook-based inventory syncing was deferred, as manual and batch updates were sufficient for initial operational needs.",
     },
     {
       title: "Multi-user Sign-in",
       details:
-        "Company-level, multi-user sign-in will be introduced later if customer demand requires shared or delegated access. Single-acccount role-based access is sufficient for MVP.",
+        "Single-account, role-based access was deemed sufficient for the MVP, avoiding the complexity of company-level permissions.",
     },
   ],
   architecturalDecisions: [
