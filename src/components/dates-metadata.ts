@@ -72,7 +72,7 @@ export const daysMetadata: DayMetadata[] = [
     theme: "foundation",
     tasks: [
       {
-        text: "Implemented session-based magic-link authentication and gated UI to secure user flows and reduce support burden.",
+        text: "Started with magic-link authentication session, but moved to an OAuth JWT solution to streamline the sign-in process.",
       },
     ],
   },
@@ -204,7 +204,7 @@ export const daysMetadata: DayMetadata[] = [
     theme: "foundation",
     tasks: [
       {
-        text: "Built accessible primitives with ARIA and keyboard support to improve inclusivity and reduce future UI rework.",
+        text: "Built primitive components with BaseUI to create consistent and accessible UI.",
       },
     ],
   },
@@ -237,7 +237,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-10",
     title: "Prefetching Optimization",
     screenshot: "/screenshots/2025-12-10.png",
-    theme: "data-architecture",
+    theme: "performance-quality",
     tasks: [
       {
         text: "Disabled unnecessary link prefetching to reduce redundant network requests and improve perceived performance.",
@@ -249,7 +249,7 @@ export const daysMetadata: DayMetadata[] = [
     date: "2025-12-10",
     title: "Consistent UI Feedback",
     screenshot: "/screenshots/2025-12-10.png",
-    theme: "data-architecture",
+    theme: "core-features",
     tasks: [
       {
         text: "Added consistent toasts and feedback patterns to prevent duplicate actions and improve UX.",
@@ -265,18 +265,6 @@ export const daysMetadata: DayMetadata[] = [
     tasks: [
       {
         text: "Adopted Prisma-generated types to cut redundant requests and strengthen type safety across data flows.",
-      },
-    ],
-  },
-  {
-    id: "e601ab17-64ca-4386-a549-d968a4ee43d8",
-    date: "2025-12-11",
-    title: "Theme Implementation",
-    screenshot: "/screenshots/2025-12-11.png",
-    theme: "data-architecture",
-    tasks: [
-      {
-        text: "Evaluated a theme toggle and decided against it to preserve visual hierarchy and avoid extra maintenance.",
       },
     ],
   },
