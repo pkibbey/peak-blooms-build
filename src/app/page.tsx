@@ -2,9 +2,9 @@ import Link from "next/link";
 import { DeployedSite } from "@/components/deployed-site";
 import { ExecutiveSummary } from "@/components/executive-summary";
 import { Hero } from "@/components/hero";
+import { Implementation } from "@/components/implementation";
 import { Lessons } from "@/components/lessons";
 import { SourceCode } from "@/components/source-code";
-import { StrategicThemes } from "@/components/strategic-themes";
 
 export default function DatesPage() {
   return (
@@ -15,8 +15,8 @@ export default function DatesPage() {
       {/* Executive Summary Section */}
       <ExecutiveSummary />
 
-      {/* Strategic Themes Section */}
-      <StrategicThemes />
+      {/* Implementation Section */}
+      <Implementation />
 
       {/* Lessons Section */}
       <Lessons />
@@ -29,15 +29,23 @@ export default function DatesPage() {
 
       {/* Footer */}
       <footer className="w-full py-12 bg-muted">
-        <div className="grid gap-3 max-w-4xl mx-auto px-4 text-center">
-          <p className="text-sm text-muted-foreground">
-            A comprehensive journey of building and launching a modern web
-            platform.{" "}
-            <Link href="/dev-notes" className="underline text-primary">
-              Dev Notes
-            </Link>{" "}
+        <div className="grid gap-6 max-w-4xl mx-auto px-4 text-center">
+          <p className="text-base text-muted-foreground">
+            <span className="text-primary">*</span> Time-saved estimates are
+            calculated from personal metrics collected over 15+ years of
+            software development. These values are derived from measured
+            time-to-complete for similar tasks across multiple projects,
+            adjusted conservatively to account for setup, debugging, and review
+            overhead.
           </p>
-          <small className="text-sm text-muted-foreground">
+          <Link href="/dev-notes" className="underline text-primary">
+            Dev Notes
+          </Link>
+          <p className="text-base text-muted-foreground">
+            A comprehensive journey of building and launching a modern web
+            platform.
+          </p>
+          <small className="text-base text-muted-foreground">
             Phineas Kibbey &copy; 2025
           </small>
         </div>

@@ -22,11 +22,11 @@ export function Hero() {
         {/* Main heading */}
         <div className="flex flex-col justify-center items-center space-y-8">
           <h1 className="justify-center items-center flex flex-col text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
-            <span className="leading-24 text-8xl text-primary/60">
-              Architecting
+            <span className="leading-24 text-8xl text-primary/40">
+              Peak Blooms
             </span>
             <span className="text-gray-800 text-5xl font-bold">
-              Peak Blooms
+              Architectural Case Study
             </span>
           </h1>
 

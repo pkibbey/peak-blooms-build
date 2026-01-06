@@ -130,8 +130,8 @@ async function generateMarkdown() {
     markdown += `### Database Fidelity\n`;
     markdown += `Use local database for development and maintain a script that can seed the data to go along with the commits, so that the schema can always be recreated to match the git history.\n\n`;
 
-    markdown += `### The 'Good Enough' Trap\n`;
-    markdown += `Don't let 'perfect' be the enemy of 'shipped', but don't let 'shipped' be an excuse for messy code. If a component feels like it needs a rewrite, it probably does.\n\n`;
+    markdown += `### The Balancing Act\n`;
+    markdown += `Lean on tools and automation to move faster, but retain human judgement — know when to guide the technology and when to let it lead.\n\n`;
 
     // Write to file
     const outputPath = path.join(__dirname, "SITE_MARKDOWN.md");

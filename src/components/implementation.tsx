@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 import { DateCardDense } from "./date-card-dense";
 import { daysMetadata, themeConfigs } from "./dates-metadata";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-export function StrategicThemes() {
+export function Implementation() {
   return (
-    <section id="strategic-themes" className="w-full py-20 bg-white/80">
+    <section id="implementation" className="w-full py-20 bg-white/80">
       <div className="max-w-6xl mx-auto px-4 space-y-24">
         {/* Section Header */}
         <div className="text-center space-y-4">
@@ -53,10 +53,7 @@ export function StrategicThemes() {
                     <div className="flex items-center gap-3">
                       <themeConfig.icon className="w-6 h-6 text-primary" />
                       <Badge variant="outline" className="text-xs">
-                        {themeConfig.key
-                          .split("-")
-                          .map((w) => w.charAt(0).toUpperCase() + w.slice(1))
-                          .join(" ")}
+                        {themeConfig.title}
                       </Badge>
                     </div>
                     <h3 className="text-2xl md:text-3xl font-bold tracking-tight">

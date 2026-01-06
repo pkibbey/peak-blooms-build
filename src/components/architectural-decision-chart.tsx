@@ -27,7 +27,6 @@ export default function ArchitecturalDecisionChart({
   if (baseline === null) return null; // hide entire graphic when both missing
 
   const max = Math.max(baseline ?? 0, ai ?? 0, 2400);
-  console.log("max: ", max);
   const baselinePct =
     baseline != null ? Math.min(100, Math.round((baseline / max) * 100)) : 0;
   const aiPct = ai != null ? Math.min(100, Math.round((ai / max) * 100)) : 0;
@@ -62,42 +61,10 @@ export default function ArchitecturalDecisionChart({
     <div className="space-y-1">
       <span className="sr-only">{accessibleSummary}</span>
 
-      {ai != null && (
-        <div className="mt-2 flex items-center justify-between gap-2">
-          <div className="grid grid-cols-[60px_1fr_auto] items-center gap-2 w-3/4">
-            <div className="text-xs text-muted-foreground mr-2">AI</div>
-            <div className="w-40 bg-slate-100 rounded overflow-hidden h-3">
-              <div
-                aria-hidden
-                style={{ width: `${aiPct}%` }}
-                className="h-3 bg-primary"
-              />
-            </div>
-            <div className="ml-2 text-xs text-muted-foreground">
-              {ai != null ? humanizeMinutes(ai) : "—"}
-            </div>
-          </div>
-        </div>
-      )}
-
-      <div className="flex items-center justify-between gap-2">
-        <div className="grid grid-cols-[60px_1fr_auto] items-center gap-2 w-3/4">
-          <div className="text-xs text-muted-foreground mr-2">Baseline</div>
-          <div className="w-40 bg-slate-100 rounded overflow-hidden h-3">
-            <div
-              aria-hidden
-              style={{ width: `${baselinePct}%` }}
-              className="h-3 bg-slate-400"
-            />
-          </div>
-          <div className="ml-2 text-xs text-muted-foreground">
-            {baseline != null ? humanizeMinutes(baseline) : "—"}
-          </div>
-        </div>
-      </div>
       {percentSaved != null && timeSaved != null && baseline != null ? (
-        <div className="mt-2 text-xs text-muted-foreground">
-          {humanizeMinutes(timeSaved)} total time saved ({percentSaved}%)
+        <div className="mt-2 text-sm text-muted-foreground">
+          *<span className="text-primary/80">{humanizeMinutes(timeSaved)}</span>{" "}
+          time saved
         </div>
       ) : null}
     </div>

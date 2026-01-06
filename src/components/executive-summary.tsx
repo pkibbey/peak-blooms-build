@@ -21,8 +21,8 @@ export function ExecutiveSummary() {
         <div className="max-w-6xl mx-auto px-4 space-y-16">
           {/* Section Header */}
           <div className="flex flex-col items-center text-center space-y-4">
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
-              Peak Blooms
+            <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+              Project Overview for Peak Blooms
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {executiveSummaryData.scope.platform}
@@ -77,12 +77,11 @@ export function ExecutiveSummary() {
                 "outline-white outline-[0.5px] outline-solid group-hover:outline-1",
               )}
             >
-              View the Architecture
+              See the Architectural Decisions
             </Button>
           </div>
         </div>
       </section>
-
       {/* Architectural Decisions */}
       <section
         id="architectural-decisions"
@@ -96,7 +95,7 @@ export function ExecutiveSummary() {
             </h3>
           </div>
 
-          <p className="text-muted-foreground">
+          <p className="text-xl text-muted-foreground">
             The following features were evaluated and chosen for their ROI and
             MVP scope:
           </p>
@@ -130,14 +129,24 @@ export function ExecutiveSummary() {
             )}
           </div>
 
-          <p className="text-muted-foreground">
-            A total of 64 hours (8 days) were saved whilst still maintaining the
-            target goal.
+          <p className="text-xl text-muted-foreground">
+            A total of{" "}
+            {executiveSummaryData.architecturalDecisions.reduce(
+              (prev, item) => {
+                return item.baselineTimeMinutes
+                  ? prev +
+                      Math.ceil(
+                        (item.baselineTimeMinutes - (item.aiTimeMinutes || 0)) /
+                          60,
+                      )
+                  : prev;
+              },
+              0,
+            )}{" "}
+            hours were saved whilst still maintaining the target MVP goals.
           </p>
         </div>
       </section>
-
-      {/* Strategic Choices Not Implemented */}
       <section className="px-8 py-16">
         <div className="max-w-6xl mx-auto space-y-6">
           <div className="flex items-center gap-3">
@@ -146,10 +155,8 @@ export function ExecutiveSummary() {
               Architectural Decisions Decided Against
             </h3>
           </div>
-
-          <p className="text-muted-foreground">
-            The following features were evaluated but deprioritized based on ROI
-            analysis and MVP scope:
+          <p className="text-xl text-muted-foreground">
+            Secured initial product viabilty by making high ROI trade offs.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -157,7 +164,7 @@ export function ExecutiveSummary() {
               (decision, idx) => (
                 <Card
                   key={idx}
-                  className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow overflow-visible"
+                  className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow overflow-visible gap-3"
                 >
                   <div className="flex flex-col items-start gap-3">
                     <h4 className="font-semibold text-foreground">
@@ -178,12 +185,36 @@ export function ExecutiveSummary() {
             )}
           </div>
 
-          <p className="text-muted-foreground">
-            A total of 104 hours (2 working weeks) were saved whilst still
-            maintaining the target goal.
+          <p className="text-xl text-muted-foreground">
+            Proactively deferring{" "}
+            {executiveSummaryData.architecturalDecisionsAgainst.length}{" "}
+            complexities saving a total of{" "}
+            {executiveSummaryData.architecturalDecisionsAgainst.reduce(
+              (prev, item) => {
+                return item.baselineTimeMinutes
+                  ? prev + Math.ceil(item.baselineTimeMinutes / 60)
+                  : prev;
+              },
+              0,
+            )}{" "}
+            hours to guarantee a stable MVP.
           </p>
         </div>
       </section>
+      <Button
+        onClick={() => {
+          const element = document.getElementById("implementation");
+          element?.scrollIntoView({ behavior: "smooth" });
+        }}
+        variant="default"
+        size="lg"
+        className={cn(
+          buttonClass,
+          "outline-white outline-[0.5px] outline-solid group-hover:outline-1 mb-16",
+        )}
+      >
+        See the Implementation Breakdown
+      </Button>
     </>
   );
 }

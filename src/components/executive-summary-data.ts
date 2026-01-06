@@ -34,7 +34,6 @@ interface ExecutiveSummaryData {
   };
   architecturalDecisions: ArchitecturalDecision[];
   architecturalDecisionsAgainst: ArchitecturalDecisionAgainst[];
-  sabbaticalInsights: string[];
   keyMetrics: {
     label: string;
     value: string;
@@ -51,7 +50,7 @@ export const executiveSummaryData: ExecutiveSummaryData = {
   },
   scope: {
     platform:
-      "An indepedant wholesale flower startup needed a custom e-commerce platform to get their new business up and running. I promised them that in 30 days, they would have a durable web app based on old-school architectural choices built with modern AI-assisted development practices.",
+      "An indepedant wholesale flower startup needed a custom e-commerce platform to get their new business up and running. I promised that in 30 days, they would have a durable web app based on old-school architectural choices built with modern AI-assisted development practices.",
     features: [
       "Product catalog with filtering, pagination, and global search",
       "Shopping cart and checkout workflow",
@@ -62,38 +61,6 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       "Database indexing and optimization",
     ],
   },
-  architecturalDecisionsAgainst: [
-    {
-      title: "Theme Toggle",
-      description:
-        "A single light theme was prioritized to ensure visual consistency and reduce the maintenance and testing burden for the MVP.",
-      baselineTimeMinutes: 16 * 60,
-    },
-    {
-      title: "Product Variants",
-      description:
-        "The data model was simplified to core attributes instead of full multi-SKU variants to reduce schema complexity and admin overhead.",
-      baselineTimeMinutes: 8 * 60,
-    },
-    {
-      title: "Payment Processing",
-      description:
-        "Full payment gateway integration was postponed to avoid introducing significant complexity into the initial checkout workflow.",
-      baselineTimeMinutes: 16 * 60,
-    },
-    {
-      title: "Inventory Syncing",
-      description:
-        "Real-time, webhook-based inventory syncing was deferred, as manual and batch updates were sufficient for initial operational needs.",
-      baselineTimeMinutes: 60 * 5 * 8,
-    },
-    {
-      title: "Multi-user Sign-in",
-      description:
-        "Single-account, role-based access was deemed sufficient for the MVP, avoiding the complexity of company-level permissions.",
-      baselineTimeMinutes: 24 * 60,
-    },
-  ],
   architecturalDecisions: [
     {
       title: "Next.js 16 + Server Actions",
@@ -136,13 +103,37 @@ export const executiveSummaryData: ExecutiveSummaryData = {
       baselineTimeMinutes: 60 * 8,
     },
   ],
-  // Key insights distilled from my generative AI sabbatical. These directly informed the architectural choices above.
-  sabbaticalInsights: [
-    "Use AI to bootstrap work—boilerplate, tests, and mock datasets—but keep humans in the loop for correctness and long-term design.",
-    "Design for observability and validation: CI, test harnesses, and performance checks are essential to verify AI-suggested changes quickly.",
-    "Centralize LLM orchestration server-side (Server Functions/Server Components) to simplify context, security, and latency management.",
-    "Prefer schema-first, type-safe models so AI-generated data and tests surface contract issues early, not at runtime.",
-    "Isolate model experiments in reproducible MCP environments to make AI-assisted work auditable and repeatable.",
+  architecturalDecisionsAgainst: [
+    {
+      title: "Theme Toggle",
+      description:
+        "A single light theme was prioritized to ensure visual consistency and reduce the maintenance and testing burden for the MVP.",
+      baselineTimeMinutes: 16 * 60,
+    },
+    {
+      title: "Product Variants",
+      description:
+        "The data model was simplified to core attributes instead of full multi-SKU variants to reduce schema complexity and admin overhead.",
+      baselineTimeMinutes: 8 * 60,
+    },
+    {
+      title: "Payment Processing",
+      description:
+        "Full payment gateway integration was postponed to avoid introducing significant complexity into the initial checkout workflow.",
+      baselineTimeMinutes: 16 * 60,
+    },
+    {
+      title: "Inventory Syncing",
+      description:
+        "Real-time, webhook-based inventory syncing was deferred, as manual and batch updates were sufficient for initial operational needs.",
+      baselineTimeMinutes: 60 * 5 * 8,
+    },
+    {
+      title: "Multi-user Sign-in",
+      description:
+        "Single-account, role-based access was deemed sufficient for the MVP, avoiding the complexity of company-level permissions.",
+      baselineTimeMinutes: 24 * 60,
+    },
   ],
   keyMetrics: [
     { label: "Pages/Routes", value: "50+" },

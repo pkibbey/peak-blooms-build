@@ -20,9 +20,9 @@ const lessons: Lesson[] = [
     tag: "Infrastructure",
   },
   {
-    title: "The 'Good Enough' Trap",
+    title: "The Balancing Act",
     description:
-      "Don't let 'perfect' be the enemy of 'shipped', but don't let 'shipped' be an excuse for messy code. If a component feels like it needs a rewrite, it probably does.",
+      "Lean on tools and automation to move faster, but retain human judgement — know when to guide the technology and when to let it lead.",
     icon: <Code size={20} />,
     tag: "Productivity",
   },

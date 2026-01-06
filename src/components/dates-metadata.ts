@@ -301,18 +301,6 @@ export const daysMetadata: DayMetadata[] = [
       },
     ],
   },
-  {
-    id: "446c909d-8df7-431d-9eb9-5ea8427956ab",
-    date: "2025-12-18",
-    title: "Achieved 80% Test Coverage",
-    screenshot: "/screenshots/2025-12-18.png",
-    theme: "performance",
-    tasks: [
-      {
-        text: "Wrote unit tests to reach 80% coverage, simplified order-number logic, and cleaned docs to reduce bugs.",
-      },
-    ],
-  },
 ];
 
 interface ThemeConfig {
@@ -357,7 +345,7 @@ export const themeConfigs: ThemeConfig[] = [
     key: "performance",
     title: "Performance",
     description:
-      "Server actions migration, build optimization, type unification, and comprehensive testing (80% coverage)",
+      "Server actions, build checks, type unification, and database optimization",
     icon: Zap,
     accentColor: "from-orange-50 to-orange-50/30",
   },

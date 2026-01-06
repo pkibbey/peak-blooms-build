@@ -19,7 +19,7 @@ export function CTA() {
         "outline-white outline-[0.5px] outline-solid group-hover:outline-1",
       )}
     >
-      View the Journey
+      See the Project Overview
     </Button>
   );
 }
