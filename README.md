@@ -1,4 +1,5 @@
-# Peak Bloms Case Study
+# Peak Blooms 
+## Architectural Case Study
 
 A compact, browsable case study of building a modern Next.js app. It documents daily progress, design decisions, and the small automation used to generate timeline metadata.
 
