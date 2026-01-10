@@ -2,7 +2,7 @@
 
 A compact, browsable case study of building a modern Next.js app. It documents daily progress, design decisions, and the small automation used to generate timeline metadata.
 
-<!-- [Live Demo](https://...) -->
+[Live Site](https://peak-blooms-case-study.vercel.app/)
 
 ## Features
 
@@ -57,7 +57,3 @@ npm run dev
 - **Tailwind CSS 4** — Styling
 - **Biome** — Lint & format
 - **shadcn/ui** — Component primitives
-
----
-
-**Notes**: Brief, focused, and meant to make it quick to run and explore the site.
