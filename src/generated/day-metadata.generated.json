@@ -2,8 +2,7 @@
   {
     "id": "2be3fbeb-9a25-433b-a235-1e38d4853083",
     "date": "2025-11-22",
-    "title": "UI Button Component & Initial Setup",
-    "screenshot": "/screenshots/2025-11-22.png",
+    "title": "UI Button Component & Initial Setup",    
     "skillsUsed": [
       "UI",
       "Testing",
@@ -23,8 +22,7 @@
   {
     "id": "7e3b6c7c-a03c-4e5c-b58a-865bfc94cfd0",
     "date": "2025-11-23",
-    "title": "Core Features & Database Setup",
-    "screenshot": "/screenshots/2025-11-23.png",
+    "title": "Core Features & Database Setup",    
     "skillsUsed": [
       "Prisma",
       "Next.js",
@@ -46,8 +44,7 @@
   {
     "id": "6c762e82-41c9-4848-ae0f-c123dbe8722f",
     "date": "2025-11-24",
-    "title": "API Updates & User Authentication",
-    "screenshot": "/screenshots/2025-11-24.png",
+    "title": "API Updates & User Authentication",    
     "skillsUsed": [
       "API",
       "Authentication"
@@ -65,8 +62,7 @@
   {
     "id": "2dab32e1-b4cf-4ada-830f-fb17570bac06",
     "date": "2025-11-24",
-    "title": "Product & UI Enhancements",
-    "screenshot": "/screenshots/2025-11-24.png",
+    "title": "Product & UI Enhancements",    
     "skillsUsed": [
       "API",
       "UI"
@@ -84,8 +80,7 @@
   {
     "id": "c6f13aef-c15b-4c7e-8a34-cc242b701e61",
     "date": "2025-11-24",
-    "title": "Refactoring & Navigation Updates",
-    "screenshot": "/screenshots/2025-11-24.png",
+    "title": "Refactoring & Navigation Updates",    
     "skillsUsed": [
       "Refactoring",
       "Navigation"
@@ -103,8 +98,7 @@
   {
     "id": "80dcf6bc-acf0-4dfc-99b1-60333f40e38e",
     "date": "2025-11-24",
-    "title": "Admin & Auth Integration",
-    "screenshot": "/screenshots/2025-11-24.png",
+    "title": "Admin & Auth Integration",    
     "skillsUsed": [
       "Admin",
       "Auth"
@@ -122,8 +116,7 @@
   {
     "id": "8a66e104-a672-485b-aa04-ee064ba63f18",
     "date": "2025-11-24",
-    "title": "Homepage & Shop Updates",
-    "screenshot": "/screenshots/2025-11-24.png",
+    "title": "Homepage & Shop Updates",    
     "skillsUsed": [
       "UI",
       "Homepage"
@@ -141,8 +134,7 @@
   {
     "id": "c60f4317-ddb7-4106-9039-9a3e1f98f122",
     "date": "2025-11-24",
-    "title": "Data Model & UI Improvements",
-    "screenshot": "/screenshots/2025-11-24.png",
+    "title": "Data Model & UI Improvements",    
     "skillsUsed": [
       "Database",
       "UI"
@@ -160,8 +152,7 @@
   {
     "id": "506f2444-7380-4262-a4ee-9be0d05114c4",
     "date": "2025-11-25",
-    "title": "UI Refactor & Admin Updates",
-    "screenshot": "/screenshots/2025-11-25.png",
+    "title": "UI Refactor & Admin Updates",    
     "skillsUsed": [
       "React",
       "Prisma",
@@ -180,8 +171,7 @@
   {
     "id": "9a4e2c1e-0b74-4fff-b55d-6b6aeb63f551",
     "date": "2025-11-26",
-    "title": "Cart & Pricing Updates",
-    "screenshot": "/screenshots/2025-11-26.png",
+    "title": "Cart & Pricing Updates",    
     "skillsUsed": [
       "React",
       "Prisma",
@@ -200,8 +190,7 @@
   {
     "id": "bbf2222e-deea-4acf-af09-870515cdf877",
     "date": "2025-11-27",
-    "title": "Shop & Filter Improvements",
-    "screenshot": "/screenshots/2025-11-27.png",
+    "title": "Shop & Filter Improvements",    
     "skillsUsed": [
       "React",
       "Prisma",
@@ -220,8 +209,7 @@
   {
     "id": "2a1c39b8-38fc-4ede-90c1-cf65c8fe25c3",
     "date": "2025-11-28",
-    "title": "Branding & Image Updates",
-    "screenshot": "/screenshots/2025-11-28.png",
+    "title": "Branding & Image Updates",    
     "skillsUsed": [
       "React",
       "UI"
@@ -239,8 +227,7 @@
   {
     "id": "3731485b-8f4c-48f3-b180-5be4f1d8ed0b",
     "date": "2025-11-29",
-    "title": "Auth & Cart Refactor",
-    "screenshot": "/screenshots/2025-11-29.png",
+    "title": "Auth & Cart Refactor",    
     "skillsUsed": [
       "React",
       "UI"
@@ -258,8 +245,7 @@
   {
     "id": "f98f8065-38a5-43d0-94e3-0f5556446467",
     "date": "2025-11-30",
-    "title": "Admin & API Enhancements",
-    "screenshot": "/screenshots/2025-11-30.png",
+    "title": "Admin & API Enhancements",    
     "skillsUsed": [
       "React",
       "Prisma",
@@ -278,8 +264,7 @@
   {
     "id": "867da211-65b9-42c8-8346-b7b80be871b4",
     "date": "2025-12-01",
-    "title": "Image & Path Updates",
-    "screenshot": "/screenshots/2025-12-01.png",
+    "title": "Image & Path Updates",    
     "skillsUsed": [
       "React",
       "UI"
@@ -297,8 +282,7 @@
   {
     "id": "3a938b12-af84-47f9-aa37-eaba23fde3c5",
     "date": "2025-12-02",
-    "title": "Product & Shop Refactor",
-    "screenshot": "/screenshots/2025-12-02.png",
+    "title": "Product & Shop Refactor",    
     "skillsUsed": [
       "React",
       "Prisma"
@@ -316,8 +300,7 @@
   {
     "id": "49ca8433-88d9-4d58-8a0c-93e87d5a4f5d",
     "date": "2025-12-03",
-    "title": "Admin & Auth Improvements",
-    "screenshot": "/screenshots/2025-12-03.png",
+    "title": "Admin & Auth Improvements",    
     "skillsUsed": [
       "React",
       "Prisma"
@@ -335,8 +318,7 @@
   {
     "id": "6be210ee-4bda-4b7f-8f02-4160c9cf31ce",
     "date": "2025-12-04",
-    "title": "Product & Cart Updates",
-    "screenshot": "/screenshots/2025-12-04.png",
+    "title": "Product & Cart Updates",    
     "skillsUsed": [
       "React",
       "Prisma"
@@ -354,8 +336,7 @@
   {
     "id": "3eed5d35-fc5c-4387-ad4e-e8af35ad3bdc",
     "date": "2025-12-05",
-    "title": "Admin & UI Refactor",
-    "screenshot": "/screenshots/2025-12-05.png",
+    "title": "Admin & UI Refactor",    
     "skillsUsed": [
       "React",
       "UI"
@@ -373,8 +354,7 @@
   {
     "id": "14e616c1-411b-4cde-88e2-9a653ce9a441",
     "date": "2025-12-06",
-    "title": "Admin & Auth Refactor",
-    "screenshot": "/screenshots/2025-12-06.png",
+    "title": "Admin & Auth Refactor",    
     "skillsUsed": [
       "React",
       "Prisma"
@@ -392,8 +372,7 @@
   {
     "id": "a38b2a79-2f63-46d8-88c0-a6761bcda6e0",
     "date": "2025-11-26",
-    "title": "Inspiration & Collection Updates",
-    "screenshot": "/screenshots/2025-11-26.png",
+    "title": "Inspiration & Collection Updates",    
     "skillsUsed": [
       "UI",
       "Testing"
@@ -420,8 +399,7 @@
   {
     "id": "4400ae14-08ce-413d-a99b-2e5def5cef1a",
     "date": "2025-11-27",
-    "title": "Component Cleanup & New Features",
-    "screenshot": "/screenshots/2025-11-27.png",
+    "title": "Component Cleanup & New Features",    
     "skillsUsed": [
       "UI",
       "Testing"
@@ -463,8 +441,7 @@
   {
     "id": "f4b6829d-52ea-4122-b7e9-4bb720667a11",
     "date": "2025-11-28",
-    "title": "Image Upload & Order History Improvements",
-    "screenshot": "/screenshots/2025-11-28.png",
+    "title": "Image Upload & Order History Improvements",    
     "skillsUsed": [
       "UI",
       "Testing"
@@ -494,8 +471,7 @@
   {
     "id": "30cbe8bb-78f8-4cd7-be01-8bd5e2356583",
     "date": "2025-11-29",
-    "title": "Form Validation & Data Layer Improvements",
-    "screenshot": "/screenshots/2025-11-29.png",
+    "title": "Form Validation & Data Layer Improvements",    
     "skillsUsed": [
       "Testing",
       "UI"
@@ -522,8 +498,7 @@
   {
     "id": "12869f0f-c13a-4775-ba05-533936527649",
     "date": "2025-11-30",
-    "title": "Admin Dashboard Layout & Utility Classes",
-    "screenshot": "/screenshots/2025-11-30.png",
+    "title": "Admin Dashboard Layout & Utility Classes",    
     "skillsUsed": [
       "UI",
       "Tailwind"
@@ -541,8 +516,7 @@
   {
     "id": "7cfe6b43-5f22-490a-9142-43a643259897",
     "date": "2025-12-01",
-    "title": "Auth Update & Site Improvements",
-    "screenshot": "/screenshots/2025-12-01.png",
+    "title": "Auth Update & Site Improvements",    
     "skillsUsed": [
       "Testing",
       "UI",
@@ -564,8 +538,7 @@
   {
     "id": "654b3562-a1a6-4454-9f75-e2280a6d5b84",
     "date": "2025-12-02",
-    "title": "Pagination & Seed Script Updates",
-    "screenshot": "/screenshots/2025-12-02.png",
+    "title": "Pagination & Seed Script Updates",    
     "skillsUsed": [
       "Testing",
       "Database"
@@ -589,8 +562,7 @@
   {
     "id": "5524a688-edd2-4767-a241-4fb9f507b562",
     "date": "2025-12-03",
-    "title": "Email Update & Admin Improvements",
-    "screenshot": "/screenshots/2025-12-03.png",
+    "title": "Email Update & Admin Improvements",    
     "skillsUsed": [
       "UI",
       "Database"
@@ -611,8 +583,7 @@
   {
     "id": "d080c0f4-ab42-4c53-a025-ccb4ee3aa5f9",
     "date": "2025-12-04",
-    "title": "Shipping Banner & Product Updates",
-    "screenshot": "/screenshots/2025-12-04.png",
+    "title": "Shipping Banner & Product Updates",    
     "skillsUsed": [
       "UI",
       "Testing"
@@ -636,8 +607,7 @@
   {
     "id": "7e05e925-d1a2-4a7b-803c-f81fc99790cc",
     "date": "2025-12-05",
-    "title": "Address Fixes & Cart Updates",
-    "screenshot": "/screenshots/2025-12-05.png",
+    "title": "Address Fixes & Cart Updates",    
     "skillsUsed": [
       "Testing",
       "UI"
@@ -655,8 +625,7 @@
   {
     "id": "d37d5872-6aee-4b93-a173-bd3cf897bb58",
     "date": "2025-12-08",
-    "title": "Product Management & Admin Cleanup",
-    "screenshot": "/screenshots/2025-12-08.png",
+    "title": "Product Management & Admin Cleanup",    
     "skillsUsed": [
       "UI",
       "Database"
@@ -677,8 +646,7 @@
   {
     "id": "be9f2f37-2221-44cb-96c0-dfddec345cba",
     "date": "2025-12-09",
-    "title": "Remove Billing, Add Roses, Market Price",
-    "screenshot": "/screenshots/2025-12-09.png",
+    "title": "Remove Billing, Add Roses, Market Price",    
     "skillsUsed": [
       "Backend",
       "Database",
@@ -700,8 +668,7 @@
   {
     "id": "b8bae943-3a8c-4395-b781-fe10c6ad258e",
     "date": "2025-12-10",
-    "title": "Update Types & Admin Improvements",
-    "screenshot": "/screenshots/2025-12-10.png",
+    "title": "Update Types & Admin Improvements",    
     "skillsUsed": [
       "Testing",
       "Database"
@@ -722,8 +689,7 @@
   {
     "id": "ebed187d-10d9-4f35-ab58-fc6eb3aac239",
     "date": "2025-12-11",
-    "title": "Theme Support & Product Refactor",
-    "screenshot": "/screenshots/2025-12-11.png",
+    "title": "Theme Support & Product Refactor",    
     "skillsUsed": [
       "UI",
       "Database"
@@ -744,8 +710,7 @@
   {
     "id": "38d01264-557c-44ef-b4ed-f6abd2127c16",
     "date": "2025-12-12",
-    "title": "Update support page links",
-    "screenshot": "/screenshots/2025-12-12.png",
+    "title": "Update support page links",    
     "skillsUsed": [
       "UI"
     ],
@@ -759,8 +724,7 @@
   {
     "id": "2853d1ea-6cf3-426f-bfe7-f06d8d93d659",
     "date": "2025-12-13",
-    "title": "Theme Refactor & UI Updates",
-    "screenshot": "/screenshots/2025-12-13.png",
+    "title": "Theme Refactor & UI Updates",    
     "skillsUsed": [
       "UI",
       "Testing"
@@ -787,8 +751,7 @@
   {
     "id": "13420d52-e2fb-4dc9-a86f-969aa84cf824",
     "date": "2025-12-14",
-    "title": "Model Refactor & UI Updates",
-    "screenshot": "/screenshots/2025-12-14.png",
+    "title": "Model Refactor & UI Updates",    
     "skillsUsed": [
       "Database",
       "UI"
@@ -806,8 +769,7 @@
   {
     "id": "6156128c-c051-48a7-a57c-3951e900e7a9",
     "date": "2025-12-15",
-    "title": "Build Fix & Copilot Update",
-    "screenshot": "/screenshots/2025-12-15.png",
+    "title": "Build Fix & Copilot Update",    
     "skillsUsed": [
       "Testing",
       "Development"
@@ -825,8 +787,7 @@
   {
     "id": "de1b6e11-a41b-4a3e-84cc-48fda3cbf451",
     "date": "2025-12-16",
-    "title": "Email/Phone Field Update & Server Actions",
-    "screenshot": "/screenshots/2025-12-16.png",
+    "title": "Email/Phone Field Update & Server Actions",    
     "skillsUsed": [
       "Database",
       "Refactoring"
@@ -850,8 +811,7 @@
   {
     "id": "204dfb5e-fb66-4921-a268-974da1baa40c",
     "date": "2025-12-17",
-    "title": "Refactor: Types, APIs & Cart",
-    "screenshot": "/screenshots/2025-12-17.png",
+    "title": "Refactor: Types, APIs & Cart",    
     "skillsUsed": [
       "Refactoring",
       "API",
@@ -883,8 +843,7 @@
   {
     "id": "58ee1965-9227-4d75-a8b3-8a4761140b49",
     "date": "2025-12-17",
-    "title": "Order Timeline & Pricing Refactor",
-    "screenshot": "/screenshots/2025-12-17.png",
+    "title": "Order Timeline & Pricing Refactor",    
     "skillsUsed": [
       "API",
       "Database",
@@ -912,8 +871,7 @@
   {
     "id": "cefc2cb7-eafe-4673-957e-8a358e01a1fb",
     "date": "2025-12-18",
-    "title": "Refactor Order Model & Autoincrement",
-    "screenshot": "/screenshots/2025-12-18.png",
+    "title": "Refactor Order Model & Autoincrement",    
     "skillsUsed": [
       "Database",
       "Testing",

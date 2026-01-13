@@ -22,8 +22,11 @@ export function ExecutiveSummary() {
           {/* Section Header */}
           <div className="flex flex-col items-center text-center space-y-4">
             <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-              Project Overview for Peak Blooms
+              Project Overview
             </h2>
+            <h3 className="text-xl md:text-3xl font-semibold text-muted-foreground">
+              Peak Blooms
+            </h3>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               {executiveSummaryData.scope.platform}
             </p>
@@ -87,17 +90,14 @@ export function ExecutiveSummary() {
         id="architectural-decisions"
         className="w-full bg-muted px-8 py-16"
       >
-        <div className="max-w-6xl mx-auto space-y-6">
-          <div className="flex items-center gap-3">
-            <Lightbulb className="w-6 h-6 text-primary" />
-            <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Architectural Decisions
-            </h3>
-          </div>
+        <div className="text-center max-w-6xl mx-auto space-y-6">
+          <h3 className="text-3xl md:text-4xl font-bold tracking-tight">
+            Architectural Decisions
+          </h3>
 
-          <p className="text-xl text-muted-foreground">
-            The following features were evaluated and chosen for their ROI and
-            MVP scope:
+          <p className="text-lg text-muted-foreground max-w-5xl mx-auto">
+            Each decision balances functionality, development velocity, and
+            long-term maintainability to deliver core value.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -105,14 +105,14 @@ export function ExecutiveSummary() {
               (decision, idx) => (
                 <Card
                   key={idx}
-                  className="p-6 border-border/50 hover:shadow-lg transition-shadow space-y-1"
+                  className="text-left p-5 border-border/50 hover:shadow-lg transition-shadow space-y-1"
                 >
-                  <div className="flex flex-col items-start gap-3">
+                  <div className="flex flex-col items-start gap-2">
                     {/* <CheckCircle2 className="w-5 h-5 text-primary mt-1 flex-shrink-0" /> */}
-                    <h4 className="font-semibold text-foreground">
+                    <h4 className="text-lg font-semibold text-foreground">
                       {decision.title}
                     </h4>
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-sm text-muted-foreground leading-normal">
                       {decision.description}
                     </p>
                   </div>
@@ -129,8 +129,8 @@ export function ExecutiveSummary() {
             )}
           </div>
 
-          <p className="text-xl text-muted-foreground">
-            A total of{" "}
+          <p className="text-lg text-center mt-12 text-muted-foreground">
+            *a total of{" "}
             {executiveSummaryData.architecturalDecisions.reduce(
               (prev, item) => {
                 return item.baselineTimeMinutes
@@ -143,20 +143,20 @@ export function ExecutiveSummary() {
               },
               0,
             )}{" "}
-            hours were saved whilst still maintaining the target MVP goals.
+            hours were saved whilst still maintaining the target MVP goals
           </p>
         </div>
       </section>
       <section className="px-8 py-16">
-        <div className="max-w-6xl mx-auto space-y-6">
-          <div className="flex items-center gap-3">
-            <AlertCircle className="w-6 h-6 text-amber-500" />
-            <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
-              Architectural Decisions Decided Against
-            </h3>
-          </div>
-          <p className="text-xl text-muted-foreground">
-            Secured initial product viabilty by making high ROI trade offs.
+        <div className="max-w-6xl text-center mx-auto space-y-6">
+          <h3 className="text-2xl md:text-3xl font-bold tracking-tight">
+            Architectural Decisions Decided{" "}
+            <span className="text-destructive">Against</span>
+          </h3>
+
+          <p className="text-xl text-muted-foreground max-w-5xl mx-auto">
+            Strategic deferral of lower-priority features ensured laser focus on
+            core product stability and time to market.
           </p>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -164,13 +164,13 @@ export function ExecutiveSummary() {
               (decision, idx) => (
                 <Card
                   key={idx}
-                  className="p-6 border-amber-200/50 bg-white hover:shadow-lg transition-shadow overflow-visible gap-3"
+                  className="text-left p-5 border-border/50 hover:shadow-lg transition-shadow space-y-1"
                 >
                   <div className="flex flex-col items-start gap-3">
-                    <h4 className="font-semibold text-foreground">
+                    <h4 className="text-lg font-semibold text-foreground">
                       {decision.title}
                     </h4>
-                    <p className="text-base text-muted-foreground">
+                    <p className="text-sm text-muted-foreground leading-normal">
                       {decision.description}
                     </p>
                   </div>
@@ -186,9 +186,7 @@ export function ExecutiveSummary() {
           </div>
 
           <p className="text-xl text-muted-foreground">
-            Proactively deferring{" "}
-            {executiveSummaryData.architecturalDecisionsAgainst.length}{" "}
-            complexities saving a total of{" "}
+            *Proactively deferring complexities to save a total of{" "}
             {executiveSummaryData.architecturalDecisionsAgainst.reduce(
               (prev, item) => {
                 return item.baselineTimeMinutes

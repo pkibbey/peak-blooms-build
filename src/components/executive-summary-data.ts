@@ -68,9 +68,11 @@ export const executiveSummaryData: ExecutiveSummaryData = {
         "Significantly streamlined the development workflow by integrating data mutations and UI updates into a more efficient, single roundtrip mechanism, reducing the manual effort and number of code-level calls required by the developer.",
     },
     {
-      title: "BaseUI + TailwindCSS",
+      title: "AI to bootstrap work",
       description:
-        "Used BaseUI for accessible primitives and Tailwind for consistent, testable styling—making AI-generated scaffolds easier to validate and integrate.",
+        "Used project-scoped MCP servers to let AI scaffold deterministic mocks and tests, with humans curating changes; limited AI to scaffolding to avoid unreviewed autonomous changes.",
+      baselineTimeMinutes: 60 * 24,
+      aiTimeMinutes: 60 * 2,
     },
     {
       title: "100% Typescript",
@@ -78,11 +80,9 @@ export const executiveSummaryData: ExecutiveSummaryData = {
         "Prefer schema-first, type-safe models so AI-generated data and tests surface contract issues early, not at runtime.",
     },
     {
-      title: "AI to bootstrap work",
+      title: "BaseUI + TailwindCSS",
       description:
-        "Used project-scoped MCP servers to let AI scaffold deterministic mocks and tests, with humans curating changes; limited AI to scaffolding to avoid unreviewed autonomous changes.",
-      baselineTimeMinutes: 60 * 24,
-      aiTimeMinutes: 60 * 2,
+        "Used BaseUI for accessible primitives and Tailwind for consistent, testable styling—making AI-generated scaffolds easier to validate and integrate.",
     },
     {
       title: "GitHub Actions + Vercel",

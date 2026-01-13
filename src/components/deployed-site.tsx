@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import ImageBehindButton from "./image-behind-button";
 import { Button } from "./ui/button";
 
 export function DeployedSite() {
@@ -10,10 +9,11 @@ export function DeployedSite() {
       <div className="flex flex-col items-center bg-background p-8 md:p-12 text-center space-y-6">
         <div className="space-y-3">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
-            View the Deployed Site
+            Visit Peak Blooms
           </h2>
           <p className="text-lg text-muted-foreground">
-            Check out the deployed Peak Blooms application live on Vercel
+            Check out the development version of the case-study application on
+            Vercel
           </p>
         </div>
         <div className="relative mt-6">

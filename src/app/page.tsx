@@ -38,15 +38,9 @@ export default function DatesPage() {
             adjusted conservatively to account for setup, debugging, and review
             overhead.
           </p>
-          <div className="grid gap-1">
-            <small className="text-sm text-muted-foreground">
-              A comprehensive journey of building and launching a modern web
-              platform.
-            </small>
-            <small className="text-sm text-muted-foreground">
-              Phineas Kibbey &copy; 2025
-            </small>
-          </div>
+          <small className="text-sm text-muted-foreground">
+            Phineas Kibbey &copy; {new Date().getFullYear()}
+          </small>
         </div>
       </footer>
     </main>

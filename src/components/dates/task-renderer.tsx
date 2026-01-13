@@ -9,10 +9,7 @@ export default function TaskRenderer({ tasks }: { tasks?: Task[] }) {
     <>
       {tasks.map((task, idx) => {
         return (
-          <p
-            key={idx}
-            className="text-sm text-foreground-muted leading-relaxed"
-          >
+          <p key={idx} className="text-sm text-foreground-muted leading-normal">
             {task.text}
           </p>
         );

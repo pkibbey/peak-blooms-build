@@ -59,7 +59,7 @@ export default function ArchitecturalDecisionChart({
       {percentSaved != null && timeSaved != null && baseline != null ? (
         <div className="mt-2 text-sm text-muted-foreground">
           *<span className="text-primary/80">{humanizeMinutes(timeSaved)}</span>{" "}
-          time saved
+          saved
         </div>
       ) : null}
     </div>

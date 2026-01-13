@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Building Peak Blooms",
+  title: "Architectural Case Study - AI Workflows",
   description: "A website that describes the process of how I built a website.",
 };
 

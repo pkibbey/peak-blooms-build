@@ -23,7 +23,7 @@ export function Hero() {
         <div className="flex flex-col justify-center items-center space-y-8">
           <h1 className="justify-center items-center flex flex-col text-5xl md:text-6xl lg:text-5xl font-bold tracking-tight">
             <span className="leading-24 text-8xl text-primary/40">
-              Peak Blooms
+              AI Workflows
             </span>
             <span className="text-gray-800 text-5xl font-bold">
               Architectural Case Study

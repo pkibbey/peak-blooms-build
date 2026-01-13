@@ -38,21 +38,15 @@ const lessons: Lesson[] = [
 export function Lessons() {
   return (
     <section id="lessons" className="w-full py-24 bg-muted">
-      <div className="max-w-4xl mx-auto px-4 space-y-12">
+      <div className="max-w-4xl mx-auto px-4 space-y-8">
         {/* Section Header */}
         <div className="text-center space-y-4">
-          <Badge
-            variant="outline"
-            className="px-4 py-1 border-secondary/20 bg-secondary/5 text-secondary"
-          >
-            Reflections
-          </Badge>
           <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
             Lessons Learned
           </h2>
-          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A look into the vulnerable side of development, and what I've
-            learned from the mistakes and the wins.
+          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
+            Key insights gained through real challenges and wins that shaped the
+            development process.
           </p>
         </div>
 
@@ -61,25 +55,14 @@ export function Lessons() {
           {lessons.map((lesson, idx) => (
             <Card
               key={idx}
-              className="p-6 border border-border/40 bg-card/50 backdrop-blur-sm hover:border-secondary/20 transition-all hover:shadow-md group"
+              className="p-5 border border-border/40 bg-card/50 backdrop-blur-sm hover:border-secondary/20 transition-all hover:shadow-md group"
             >
-              <div className="space-y-4">
-                <div className="flex items-center gap-3">
-                  <div className="p-2 rounded-lg bg-secondary/80 text-secondary-foreground/80 group-hover:bg-secondary group-hover:text-secondary-foreground transition-colors">
-                    {lesson.icon}
-                  </div>
-                  <Badge
-                    variant="secondary"
-                    className="bg-muted text-sm font-medium"
-                  >
-                    {lesson.tag}
-                  </Badge>
-                </div>
+              <div className="space-y-3">
                 <div className="space-y-2">
-                  <h3 className="font-bold text-xl tracking-tight">
+                  <h3 className="font-semibold text-lg tracking-tight text-primary">
                     {lesson.title}
                   </h3>
-                  <p className="text-muted-foreground leading-relaxed">
+                  <p className="text-sm text-muted-foreground leading-relaxed">
                     {lesson.description}
                   </p>
                 </div>
